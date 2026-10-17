@@ -1,0 +1,14 @@
+store_id,store_name,store_type,city,region,open_date,size_sqm
+S001,UrbanMart Athens 1,High Street,Athens,Attica,2018-06-10,1710
+S002,UrbanMart Piraeus 2,Outlet,Piraeus,Attica,2019-06-19,865
+S003,UrbanMart Thessaloniki 3,Outlet,Thessaloniki,Central Macedonia,2016-05-02,1241
+S004,UrbanMart Patras 4,High Street,Patras,Western Greece,2022-11-04,962
+S005,UrbanMart Heraklion 5,Mall,Heraklion,Crete,2017-05-28,2382
+S006,UrbanMart Larissa 6,High Street,Larissa,Thessaly,2018-10-18,513
+S007,UrbanMart Ioannina 7,Mall,Ioannina,Epirus,2019-05-13,321
+S008,UrbanMart Athens 8,Mall,Athens,Attica,2016-08-18,2231
+S009,UrbanMart Piraeus 9,Outlet,Piraeus,Attica,2019-11-19,661
+S010,UrbanMart Thessaloniki 10,Mall,Thessaloniki,Central Macedonia,2017-12-13,1208
+S011,UrbanMart Patras 11,High Street,Patras,Western Greece,2015-11-24,454
+S012,UrbanMart Heraklion 12,Outlet,Heraklion,Crete,2019-04-24,1941
+S900,UrbanMart Online,Online,Athens,Attica,2020-03-01,0

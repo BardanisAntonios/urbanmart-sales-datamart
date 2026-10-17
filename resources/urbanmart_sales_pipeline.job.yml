@@ -1,0 +1,63 @@
+# Lakeflow Job: setup -> bronze -> profiling -> silver -> gold dimensions -> gold fact -> validation (final gate).
+# No compute is declared, so the tasks run on serverless jobs compute (the only option on Databricks Free Edition).
+# Job parameters are pushed down to every notebook task as widget values.
+resources:
+  jobs:
+    urbanmart_sales_pipeline:
+      name: urbanmart-sales-pipeline
+      description: >
+        UrbanMart sales data mart. Ingests the CSV extracts from the landing volume, cleanses them in silver,
+        loads the gold star schema and fails the run if any validation check fails.
+      max_concurrent_runs: 1
+      parameters:
+        - name: catalog
+          default: ${var.catalog}
+        - name: bronze_schema
+          default: ${var.bronze_schema}
+        - name: silver_schema
+          default: ${var.silver_schema}
+        - name: gold_schema
+          default: ${var.gold_schema}
+      tags:
+        project: urbanmart-capstone
+        layer: medallion
+      tasks:
+        - task_key: setup
+          notebook_task:
+            notebook_path: ../notebooks/00_setup.sql
+
+        - task_key: bronze_ingestion
+          depends_on:
+            - task_key: setup
+          notebook_task:
+            notebook_path: ../notebooks/01_bronze_ingestion.py
+
+        - task_key: bronze_profiling
+          depends_on:
+            - task_key: bronze_ingestion
+          notebook_task:
+            notebook_path: ../notebooks/02_bronze_profiling.sql
+
+        - task_key: silver_cleansing
+          depends_on:
+            - task_key: bronze_profiling
+          notebook_task:
+            notebook_path: ../notebooks/03_silver_cleansing.sql
+
+        - task_key: gold_dimensions
+          depends_on:
+            - task_key: silver_cleansing
+          notebook_task:
+            notebook_path: ../notebooks/04_gold_dimensions.sql
+
+        - task_key: gold_fact
+          depends_on:
+            - task_key: gold_dimensions
+          notebook_task:
+            notebook_path: ../notebooks/05_gold_fact.sql
+
+        - task_key: validation_gate
+          depends_on:
+            - task_key: gold_fact
+          notebook_task:
+            notebook_path: ../notebooks/06_validation.sql

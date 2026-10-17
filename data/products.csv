@@ -1,0 +1,77 @@
+product_id,product_name,category,subcategory,brand,unit_cost,list_price,is_active
+P0001,Aegean Headphones,Electronics,Headphones,Aegean,168.98,266.04,Y
+P0002,Nova Headphones,Electronics,Headphones,Nova,189.48,305.05,Y
+P0003,Helios Headphones,Electronics,Headphones,Helios,90.71,140.78,Y
+P0004,Aegean Smartwatch,Electronics,Smartwatch,Aegean,191.79,288.91,N
+P0005,Nova Smartwatch,Electronics,Smartwatch,Nova,205.89,251.51,Y
+P0006,Helios Smartwatch,Electronics,Smartwatch,Helios,134.3,173.98,N
+P0007,Zephyr Tablet,Electronics,Tablet,Zephyr,37.73,63.16,Y
+P0008,Aegean Tablet,Electronics,Tablet,Aegean,239.43,289.18,Y
+P0009,Olympus Tablet,Electronics,Tablet,Olympus,32.56,39.19,N
+P0010,Zephyr Speaker,Electronics,Speaker,Zephyr,54.09,92.98,Y
+P0011,Nova Speaker,Electronics,Speaker,Nova,54.51,99.97,Y
+P0012,Helios Speaker,Electronics,Speaker,Helios,41.92,56.78,Y
+P0013,Helios Charger,Electronics,Charger,Helios,168.4,268.95,Y
+P0014,Nova Charger,Electronics,Charger,Nova,213.14,394.88,N
+P0015,Olympus Charger,Electronics,Charger,Olympus,161.88,202.54,Y
+P0016,Aegean Coffee Maker,Home,Coffee Maker,Aegean,181.95,280.39,Y
+P0017,Nova Coffee Maker,Home,Coffee Maker,Nova,90.57,151.24,Y
+P0018,Olympus Coffee Maker,Home,Coffee Maker,Olympus,26.81,43.8,Y
+P0019,Aegean Lamp,Home,Lamp,Aegean,83.43,138.63,Y
+P0020,Olympus Lamp,Home,Lamp,Olympus,142.26,207.01,Y
+P0021,Helios Lamp,Home,Lamp,Helios,239.75,316.0,Y
+P0022,Helios Blender,Home,Blender,Helios,185.47,279.19,Y
+P0023,Zephyr Blender,Home,Blender,Zephyr,35.31,60.49,N
+P0024,Aegean Blender,Home,Blender,Aegean,116.79,169.48,Y
+P0025,Olympus Kettle,Home,Kettle,Olympus,162.1,203.82,Y
+P0026,Nova Kettle,Home,Kettle,Nova,214.96,279.02,Y
+P0027,Zephyr Kettle,Home,Kettle,Zephyr,67.28,122.48,Y
+P0028,Nova Toaster,Home,Toaster,Nova,158.64,280.61,N
+P0029,Zephyr Toaster,Home,Toaster,Zephyr,192.76,260.02,Y
+P0030,Aegean Toaster,Home,Toaster,Aegean,138.8,219.36,N
+P0031,Helios T-Shirt,Apparel,T-Shirt,Helios,57.38,99.87,Y
+P0032,Aegean T-Shirt,Apparel,T-Shirt,Aegean,35.2,54.59,Y
+P0033,Zephyr T-Shirt,Apparel,T-Shirt,Zephyr,100.4,155.77,Y
+P0034,Zephyr Jacket,Apparel,Jacket,Zephyr,36.81,48.27,Y
+P0035,Helios Jacket,Apparel,Jacket,Helios,184.51,283.86,Y
+P0036,Aegean Jacket,Apparel,Jacket,Aegean,12.02,20.83,Y
+P0037,Nova Sneakers,Apparel,Sneakers,Nova,60.04,100.15,Y
+P0038,Aegean Sneakers,Apparel,Sneakers,Aegean,98.25,181.03,Y
+P0039,Helios Sneakers,Apparel,Sneakers,Helios,11.9,19.68,Y
+P0040,Zephyr Jeans,Apparel,Jeans,Zephyr,67.3,106.4,Y
+P0041,Aegean Jeans,Apparel,Jeans,Aegean,95.41,139.77,Y
+P0042,Olympus Jeans,Apparel,Jeans,Olympus,130.13,190.44,Y
+P0043,Zephyr Hoodie,Apparel,Hoodie,Zephyr,204.67,295.04,N
+P0044,Olympus Hoodie,Apparel,Hoodie,Olympus,222.02,267.45,Y
+P0045,Helios Hoodie,Apparel,Hoodie,Helios,111.09,151.19,Y
+P0046,Helios Olive Oil,Grocery,Olive Oil,Helios,41.02,66.51,Y
+P0047,Zephyr Olive Oil,Grocery,Olive Oil,Zephyr,165.96,247.32,Y
+P0048,Nova Olive Oil,Grocery,Olive Oil,Nova,180.62,277.62,N
+P0049,Olympus Coffee Beans,Grocery,Coffee Beans,Olympus,41.99,74.88,Y
+P0050,Helios Coffee Beans,Grocery,Coffee Beans,Helios,62.43,80.5,Y
+P0051,Aegean Coffee Beans,Grocery,Coffee Beans,Aegean,35.41,55.2,Y
+P0052,Nova Honey,Grocery,Honey,Nova,230.77,360.38,N
+P0053,Helios Honey,Grocery,Honey,Helios,150.64,240.2,Y
+P0054,Olympus Honey,Grocery,Honey,Olympus,219.87,375.89,Y
+P0055,Nova Pasta Pack,Grocery,Pasta Pack,Nova,152.42,233.2,N
+P0056,Helios Pasta Pack,Grocery,Pasta Pack,Helios,44.3,78.91,Y
+P0057,Olympus Pasta Pack,Grocery,Pasta Pack,Olympus,199.06,353.2,Y
+P0058,Zephyr Feta Cheese,Grocery,Feta Cheese,Zephyr,181.6,261.48,N
+P0059,Aegean Feta Cheese,Grocery,Feta Cheese,Aegean,149.94,187.15,N
+P0060,Nova Feta Cheese,Grocery,Feta Cheese,Nova,97.59,124.52,Y
+P0061,Zephyr Yoga Mat,Sports,Yoga Mat,Zephyr,152.17,201.5,Y
+P0062,Olympus Yoga Mat,Sports,Yoga Mat,Olympus,219.68,345.34,Y
+P0063,Nova Yoga Mat,Sports,Yoga Mat,Nova,25.11,41.72,Y
+P0064,Olympus Dumbbells,Sports,Dumbbells,Olympus,218.96,369.68,N
+P0065,Zephyr Dumbbells,Sports,Dumbbells,Zephyr,58.91,103.78,N
+P0066,Helios Dumbbells,Sports,Dumbbells,Helios,88.93,156.8,Y
+P0067,Olympus Football,Sports,Football,Olympus,120.33,163.98,Y
+P0068,Helios Football,Sports,Football,Helios,72.25,131.04,N
+P0069,Zephyr Football,Sports,Football,Zephyr,65.94,79.38,Y
+P0070,Zephyr Water Bottle,Sports,Water Bottle,Zephyr,3.78,6.27,Y
+P0071,Nova Water Bottle,Sports,Water Bottle,Nova,103.39,131.78,N
+P0072,Aegean Water Bottle,Sports,Water Bottle,Aegean,163.59,225.35,N
+P0073,Zephyr Tennis Racket,Sports,Tennis Racket,Zephyr,70.34,117.92,Y
+P0074,Aegean Tennis Racket,Sports,Tennis Racket,Aegean,104.48,182.7,N
+P0075,Olympus Tennis Racket,Sports,Tennis Racket,Olympus,46.32,73.71,N
+P9999,Unknown Item,,,,0,0,N

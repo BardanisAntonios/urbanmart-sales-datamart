@@ -1,0 +1,509 @@
+customer_id,first_name,last_name,email,gender,birth_date,city,region,segment,signup_date
+C0001,Giorgos,Papadopoulos,giorgos.papadopoulos1@mail.gr,F,1998-12-05,Larissa,Thessaly,Retail,2022-03-31
+C0002,Sofia,Papadopoulos,sofia.papadopoulos2@mail.gr,F,1967-11-03,Heraklion,Crete,Retail,2024-01-04
+C0003,Petros,Makris,petros.makris3@mail.gr,F,1964-04-28,Larissa,Thessaly,Loyalty Gold,2023-12-16
+C0004,Dimitris,Vasileiou,dimitris.vasileiou4@mail.gr,F,1958-04-28,Patras,Western Greece,Retail,2023-01-25
+C0005,Dimitris,Christodoulou,dimitris.christodoulou5@mail.gr,M,1998-02-09,Athens,Attica,Loyalty Silver,2022-05-08
+C0006,Giorgos,Makris,giorgos.makris6@mail.gr,M,1967-04-02,Patras,Western Greece,Retail,2023-12-23
+C0007,Maria,Ioannou,maria.ioannou7@mail.gr,F,1984-02-07,Athens,Attica,Retail,2022-10-12
+C0008,Ioanna,Christodoulou,ioanna.christodoulou8@mail.gr,M,1956-05-28,Patras,Western Greece,Retail,2023-09-16
+C0009,Eleni,Makris,eleni.makris9@mail.gr,F,1979-02-04,Larissa,Thessaly,Retail,2024-05-13
+C0010,Maria,Ioannou,maria.ioannou10@mail.gr,F,1968-12-05,Ioannina,Epirus,Retail,2023-08-04
+C0011,Dimitris,Ioannou,dimitris.ioannou11@mail.gr,M,1962-10-26,Larissa,Thessaly,Loyalty Gold,2022-09-29
+C0012,Nikos,Makris,nikos.makris12@mail.gr,M,1982-06-23,Piraeus,Attica,Loyalty Silver,2022-08-13
+C0013,Anna,Karagiannis,anna.karagiannis13@mail.gr,F,1964-05-09,Piraeus,Attica,Retail,2024-03-22
+C0014,Sofia,Oikonomou,sofia.oikonomou14@mail.gr,M,1997-06-21,Larissa,Thessaly,Retail,2022-09-15
+C0015,Maria,Nikolaou,maria.nikolaou15@mail.gr,M,1960-01-04,Heraklion,Crete,Loyalty Silver,2022-10-28
+C0016,Eleni,Karagiannis,eleni.karagiannis16@mail.gr,M,1994-11-29,Patras,Western Greece,Retail,2024-02-20
+C0017,Anna,Nikolaou,anna.nikolaou17@mail.gr,F,1963-09-18,Piraeus,Attica,Retail,2023-01-18
+C0018,Eleni,Makris,eleni.makris18@mail.gr,M,1951-10-01,Ioannina,Epirus,Loyalty Silver,2022-04-25
+C0019,Katerina,Ioannou,katerina.ioannou19@mail.gr,F,1957-09-07,Thessaloniki,Central Macedonia,Retail,2024-01-20
+C0020,Giorgos,Makris,giorgos.makris20@mail.gr,F,1973-10-12,Patras,Western Greece,Retail,2023-06-25
+C0021,Yannis,Pappas,yannis.pappas21@mail.gr,F,1977-12-19,Ioannina,Epirus,Retail,2023-02-13
+C0022,Ioanna,Christodoulou,ioanna.christodoulou22@mail.gr,F,1970-02-27,Larissa,Thessaly,Loyalty Gold,2022-03-07
+C0023,Maria,Oikonomou,maria.oikonomou23@mail.gr,F,1955-04-14,Thessaloniki,Central Macedonia,Loyalty Silver,2022-08-23
+C0024,Maria,Christodoulou,maria.christodoulou24@mail.gr,M,1969-03-22,Athens,Attica,Retail,2023-07-07
+C0025,Petros,Oikonomou,petros.oikonomou25@mail.gr,M,1967-01-31,Piraeus,Attica,Loyalty Silver,2022-04-07
+C0026,Ioanna,Pappas,ioanna.pappas26@mail.gr,F,1958-10-30,Athens,Attica,Retail,2022-03-04
+C0027,Petros,Christodoulou,petros.christodoulou27@mail.gr,M,1962-07-30,Patras,Western Greece,Retail,2023-03-09
+C0028,Katerina,Karagiannis,katerina.karagiannis28@mail.gr,F,1954-07-16,Piraeus,Attica,Retail,2023-10-30
+C0029,Maria,Nikolaou,maria.nikolaou29@mail.gr,F,1985-12-24,Heraklion,Crete,Retail,2022-03-02
+C0030,Sofia,Papadopoulos,sofia.papadopoulos30@mail.gr,M,1975-08-05,Piraeus,Attica,Loyalty Gold,2023-03-10
+C0031,Petros,Makris,petros.makris31@mail.gr,F,1998-08-23,Larissa,Thessaly,Loyalty Gold,2022-03-04
+C0032,Dimitris,Papadopoulos,dimitris.papadopoulos32@mail.gr,F,1955-02-07,Larissa,Thessaly,Retail,2023-06-05
+C0033,Eleni,Nikolaou,eleni.nikolaou33@mail.gr,M,1960-10-03,Athens,Attica,Loyalty Silver,2023-08-07
+C0034,Yannis,Oikonomou,yannis.oikonomou34@mail.gr,M,1973-05-24,Piraeus,Attica,Retail,2022-07-29
+C0035,Petros,Christodoulou,petros.christodoulou35@mail.gr,M,1991-01-08,Larissa,Thessaly,Retail,2022-11-20
+C0036,Giorgos,Papadopoulos,giorgos.papadopoulos36@mail.gr,F,1956-07-28,Ioannina,Epirus,Loyalty Gold,2023-07-05
+C0037,Anna,Vasileiou,anna.vasileiou37@mail.gr,F,1983-02-25,Piraeus,Attica,Retail,2022-10-19
+C0038,Kostas,Makris,kostas.makris38@mail.gr,F,1976-11-10,Piraeus,Attica,Retail,2023-11-11
+C0039,Eleni,Vasileiou,eleni.vasileiou39@mail.gr,F,1974-06-08,Athens,Attica,Retail,2022-10-16
+C0040,Nikos,Christodoulou,nikos.christodoulou40@mail.gr,M,1972-07-12,Heraklion,Crete,Retail,2024-05-16
+C0041,Giorgos,Pappas,giorgos.pappas41@mail.gr,F,1973-07-02,ATHENS ,Attica,Retail,2022-06-15
+C0042,Kostas,Makris,kostas.makris42@mail.gr,F,1998-12-12,Larissa,Thessaly,Loyalty Gold,2022-02-06
+C0043,Dimitris,Oikonomou,dimitris.oikonomou43@mail.gr,M,1982-09-18,Ioannina,Epirus,Loyalty Silver,2024-03-26
+C0044,Maria,Christodoulou,maria.christodoulou44@mail.gr,M,1986-06-17,Ioannina,Epirus,Retail,2023-09-28
+C0045,Eleni,Ioannou,eleni.ioannou45@mail.gr,M,1952-03-23,Larissa,Thessaly,Retail,2022-07-03
+C0046,Dimitris,Pappas,dimitris.pappas46@mail.gr,F,1984-04-27,Larissa,Thessaly,Retail,2024-06-12
+C0047,Kostas,Ioannou,kostas.ioannou47@mail.gr,M,1970-06-02,Athens,Attica,Retail,2022-08-17
+C0048,Ioanna,Ioannou,ioanna.ioannou48@mail.gr,M,1981-07-03,Athens,Attica,Loyalty Gold,2023-10-19
+C0049,Sofia,Makris,sofia.makris49@mail.gr,M,1966-01-08,Heraklion,Crete,Retail,2023-08-18
+C0050,Maria,Nikolaou,maria.nikolaou50@mail.gr,M,1989-02-24,Thessaloniki,Central Macedonia,Loyalty Silver,2023-09-13
+C0051,Giorgos,Pappas,giorgos.pappas51@mail.gr,M,1950-02-25,Heraklion,Crete,Loyalty Silver,2023-06-17
+C0052,Anna,Ioannou,anna.ioannou52@mail.gr,M,1978-03-01,Ioannina,Epirus,Retail,2023-11-11
+C0053,Giorgos,Vasileiou,giorgos.vasileiou53@mail.gr,M,1976-07-11,Ioannina,Epirus,Loyalty Silver,2023-07-22
+C0054,Nikos,Pappas,nikos.pappas54@mail.gr,M,1986-06-07,Piraeus,Attica,Loyalty Gold,2023-07-16
+C0055,Maria,Vasileiou,maria.vasileiou55@mail.gr,M,1991-09-19,Ioannina,Epirus,Retail,2023-03-29
+C0056,Ioanna,Ioannou,ioanna.ioannou56@mail.gr,F,1957-08-10,Patras,Western Greece,Loyalty Silver,2022-10-18
+C0057,Ioanna,Oikonomou,ioanna.oikonomou57@mail.gr,F,1977-11-06,Heraklion,Crete,Retail,2022-08-19
+C0058,Nikos,Georgiou,nikos.georgiou58@mail.gr,F,1990-11-10,IOANNINA ,Epirus,Retail,2023-03-01
+C0059,Yannis,Ioannou,yannis.ioannou59@mail.gr,F,1959-07-25,Larissa,Thessaly,Loyalty Gold,2024-03-08
+C0060,Nikos,Georgiou,nikos.georgiou60@mail.gr,F,1990-12-14,Patras,Western Greece,Loyalty Silver,2022-05-17
+C0061,Kostas,Makris,kostas.makris61@mail.gr,M,1995-04-15,Ioannina,Epirus,Loyalty Silver,2023-03-13
+C0062,Anna,Karagiannis,anna.karagiannis62@mail.gr,M,1972-03-07,Ioannina,Epirus,Retail,2024-05-10
+C0063,Katerina,Makris,katerina.makris63@mail.gr,F,1975-08-20,Larissa,Thessaly,Loyalty Gold,2022-08-29
+C0064,Dimitris,Christodoulou,dimitris.christodoulou64@mail.gr,M,1963-09-17,Thessaloniki,Central Macedonia,Loyalty Silver,2023-12-25
+C0065,Giorgos,Pappas,giorgos.pappas65@mail.gr,F,1968-07-22,Piraeus,Attica,Loyalty Gold,2024-05-02
+C0066,Sofia,Oikonomou,sofia.oikonomou66@mail.gr,M,1992-10-16,Patras,Western Greece,Retail,2022-01-07
+C0067,Katerina,Pappas,katerina.pappas67@mail.gr,F,1993-10-20,Thessaloniki,Central Macedonia,Loyalty Gold,2022-08-13
+C0068,Sofia,Karagiannis,sofia.karagiannis68@mail.gr,M,1964-10-22,Thessaloniki,Central Macedonia,Retail,2024-05-10
+C0069,Eleni,Oikonomou,eleni.oikonomou69@mail.gr,F,1957-07-13,PATRAS ,Western Greece,Loyalty Silver,2023-10-21
+C0070,Eleni,Karagiannis,eleni.karagiannis70@mail.gr,F,1990-10-17,Patras,Western Greece,Retail,2022-12-01
+C0071,Sofia,Vasileiou,sofia.vasileiou71@mail.gr,F,1998-05-24,Thessaloniki,Central Macedonia,Loyalty Gold,2022-02-23
+C0072,Nikos,Nikolaou,nikos.nikolaou72@mail.gr,F,1951-10-30,Thessaloniki,Central Macedonia,Retail,2023-09-29
+C0073,Nikos,Georgiou,nikos.georgiou73@mail.gr,F,1991-09-21,Piraeus,Attica,Loyalty Gold,2023-12-18
+C0074,Dimitris,Georgiou,dimitris.georgiou74@mail.gr,F,1964-09-10,Thessaloniki,Central Macedonia,Loyalty Silver,2022-11-15
+C0075,Yannis,Papadopoulos,yannis.papadopoulos75@mail.gr,M,1985-08-02,Athens,Attica,Retail,2024-01-03
+C0076,Giorgos,Oikonomou,giorgos.oikonomou76@mail.gr,F,1953-09-07,Piraeus,Attica,Retail,2022-12-22
+C0077,Sofia,Christodoulou,sofia.christodoulou77@mail.gr,M,1993-12-23,Heraklion,Crete,Retail,2022-04-19
+C0078,Dimitris,Karagiannis,dimitris.karagiannis78@mail.gr,M,1998-04-13,Patras,Western Greece,Retail,2024-03-04
+C0079,Kostas,Pappas,kostas.pappas79@mail.gr,F,1975-01-09,Patras,Western Greece,Loyalty Silver,2023-04-07
+C0080,Kostas,Oikonomou,kostas.oikonomou80@mail.gr,M,1979-02-28,Piraeus,Attica,Loyalty Silver,2022-07-06
+C0081,Nikos,Christodoulou,nikos.christodoulou81@mail.gr,M,1950-11-29,Patras,Western Greece,Retail,2023-06-14
+C0082,Giorgos,Ioannou,giorgos.ioannou82@mail.gr,M,1994-01-13,Piraeus,Attica,Loyalty Gold,2023-04-04
+C0083,Maria,Nikolaou,maria.nikolaou83@mail.gr,M,1983-02-09,Ioannina,Epirus,Retail,2023-04-30
+C0084,Anna,Christodoulou,anna.christodoulou84@mail.gr,M,1990-09-16,Heraklion,Crete,Loyalty Gold,2022-10-05
+C0085,Katerina,Ioannou,katerina.ioannou85@mail.gr,F,1967-03-09,Thessaloniki,Central Macedonia,Retail,2022-08-10
+C0086,Kostas,Vasileiou,kostas.vasileiou86@mail.gr,M,1959-01-08,Larissa,Thessaly,Loyalty Silver,2024-05-02
+C0087,Katerina,Ioannou,,F,1974-08-11,Piraeus,Attica,Retail,2022-02-16
+C0088,Anna,Vasileiou,anna.vasileiou88@mail.gr,F,1951-02-06,Athens,Attica,Retail,2023-08-11
+C0089,Kostas,Karagiannis,kostas.karagiannis89@mail.gr,M,1992-11-10,Thessaloniki,Central Macedonia,Loyalty Gold,2022-04-27
+C0090,Giorgos,Pappas,giorgos.pappas90@mail.gr,F,1963-08-12,Ioannina,Epirus,Loyalty Gold,2022-06-02
+C0091,Yannis,Vasileiou,yannis.vasileiou91@mail.gr,M,1970-04-01,Ioannina,Epirus,Retail,2024-03-05
+C0092,Sofia,Karagiannis,sofia.karagiannis92@mail.gr,M,1977-05-25,Heraklion,Crete,Loyalty Gold,2023-08-06
+C0093,Maria,Oikonomou,maria.oikonomou93@mail.gr,F,1973-09-28,Heraklion,Crete,Retail,2023-11-08
+C0094,Eleni,Ioannou,eleni.ioannou94@mail.gr,M,1990-06-02,Athens,Attica,Retail,2023-12-07
+C0095,Kostas,Vasileiou,kostas.vasileiou95@mail.gr,M,1956-05-21,Heraklion,Crete,Retail,2023-12-05
+C0096,Katerina,Oikonomou,katerina.oikonomou96@mail.gr,F,1973-10-31,Piraeus,Attica,Retail,2024-04-26
+C0097,Giorgos,Papadopoulos,giorgos.papadopoulos97@mail.gr,M,1989-05-26,Piraeus,Attica,Retail,2022-05-08
+C0098,Petros,Vasileiou,petros.vasileiou98@mail.gr,M,1989-04-10,Patras,Western Greece,Loyalty Gold,2022-03-24
+C0099,Maria,Pappas,,F,1951-11-11,Heraklion,Crete,Retail,2024-02-23
+C0100,Katerina,Oikonomou,katerina.oikonomou100@mail.gr,M,1974-12-15,Larissa,Thessaly,Retail,2022-07-05
+C0101,Sofia,Karagiannis,sofia.karagiannis101@mail.gr,M,1959-05-21,Heraklion,Crete,Retail,2024-05-28
+C0102,Dimitris,Pappas,dimitris.pappas102@mail.gr,F,1990-10-21,Piraeus,Attica,Loyalty Gold,2022-04-01
+C0103,Katerina,Christodoulou,katerina.christodoulou103@mail.gr,F,1998-09-05,Thessaloniki,Central Macedonia,Retail,2023-04-19
+C0104,Maria,Ioannou,maria.ioannou104@mail.gr,M,1954-08-19,Patras,Western Greece,Loyalty Silver,2022-07-28
+C0105,Anna,Georgiou,anna.georgiou105@mail.gr,F,1952-08-03,Thessaloniki,Central Macedonia,Retail,2023-10-08
+C0106,Nikos,Georgiou,nikos.georgiou106@mail.gr,F,1970-02-27,Heraklion,Crete,Retail,2024-05-11
+C0107,Kostas,Nikolaou,kostas.nikolaou107@mail.gr,M,1987-04-11,Athens,Attica,Retail,2024-05-04
+C0108,Kostas,Ioannou,kostas.ioannou108@mail.gr,F,1956-04-06,Patras,Western Greece,Loyalty Gold,2022-10-10
+C0109,Sofia,Christodoulou,,M,1993-12-05,Ioannina,Epirus,Loyalty Silver,2024-06-05
+C0110,Kostas,Makris,kostas.makris110@mail.gr,M,1990-11-07,Piraeus,Attica,Loyalty Gold,2022-11-26
+C0111,Nikos,Ioannou,nikos.ioannou111@mail.gr,M,1953-12-01,Ioannina,Epirus,Loyalty Silver,2022-11-22
+C0112,Kostas,Pappas,kostas.pappas112@mail.gr,F,1994-06-09,Larissa,Thessaly,Loyalty Gold,2022-02-07
+C0113,Anna,Oikonomou,anna.oikonomou113@mail.gr,M,1958-12-12,Piraeus,Attica,Retail,2023-06-23
+C0114,Maria,Georgiou,maria.georgiou114@mail.gr,F,1992-02-14,Patras,Western Greece,Loyalty Gold,2024-03-11
+C0115,Dimitris,Oikonomou,dimitris.oikonomou115@mail.gr,M,1978-05-30,Thessaloniki,Central Macedonia,Loyalty Gold,2023-10-04
+C0116,Kostas,Makris,kostas.makris116@mail.gr,M,1970-05-30,Larissa,Thessaly,Retail,2024-02-04
+C0117,Sofia,Nikolaou,sofia.nikolaou117@mail.gr,F,1954-02-16,Athens,Attica,Retail,2022-11-29
+C0118,Maria,Vasileiou,maria.vasileiou118@mail.gr,M,1966-02-26,Ioannina,Epirus,Retail,2022-06-24
+C0119,Giorgos,Oikonomou,giorgos.oikonomou119@mail.gr,F,1970-10-31,Piraeus,Attica,Loyalty Gold,2023-04-18
+C0120,Katerina,Karagiannis,katerina.karagiannis120@mail.gr,M,1975-10-22,Larissa,Thessaly,Retail,2023-11-25
+C0121,Eleni,Nikolaou,eleni.nikolaou121@mail.gr,M,1988-01-25,Heraklion,Crete,Loyalty Gold,2023-12-08
+C0122,Kostas,Vasileiou,kostas.vasileiou122@mail.gr,F,1971-04-13,Thessaloniki,Central Macedonia,Retail,2023-01-26
+C0123,Dimitris,Oikonomou,dimitris.oikonomou123@mail.gr,M,1974-08-17,Heraklion,Crete,Retail,2022-01-09
+C0124,Ioanna,Papadopoulos,ioanna.papadopoulos124@mail.gr,M,1970-08-24,Heraklion,Crete,Loyalty Silver,2023-09-14
+C0125,Dimitris,Ioannou,dimitris.ioannou125@mail.gr,F,1958-09-19,Ioannina,Epirus,Retail,2023-10-05
+C0126,Maria,Vasileiou,maria.vasileiou126@mail.gr,F,1958-02-01,LARISSA ,Thessaly,Loyalty Gold,2022-10-30
+C0127,Petros,Pappas,petros.pappas127@mail.gr,M,1997-08-16,Thessaloniki,Central Macedonia,Retail,2023-05-29
+C0128,Eleni,Vasileiou,eleni.vasileiou128@mail.gr,M,1960-05-01,Thessaloniki,Central Macedonia,Loyalty Gold,2023-04-25
+C0129,Eleni,Ioannou,eleni.ioannou129@mail.gr,M,1958-02-07,Athens,Attica,Loyalty Gold,2024-03-20
+C0130,Maria,Vasileiou,maria.vasileiou130@mail.gr,M,1984-03-08,Patras,Western Greece,Loyalty Silver,2024-04-22
+C0131,Dimitris,Nikolaou,dimitris.nikolaou131@mail.gr,M,1969-11-10,Larissa,Thessaly,Retail,2023-10-26
+C0132,Ioanna,Karagiannis,ioanna.karagiannis132@mail.gr,F,1953-05-04,Athens,Attica,Retail,2022-11-08
+C0133,Giorgos,Nikolaou,giorgos.nikolaou133@mail.gr,M,1983-04-15,Patras,Western Greece,Retail,2023-11-18
+C0134,Petros,Makris,petros.makris134@mail.gr,M,1958-11-19,Larissa,Thessaly,Loyalty Gold,2024-05-03
+C0135,Yannis,Pappas,yannis.pappas135@mail.gr,M,1989-11-23,PATRAS ,Western Greece,Retail,2022-08-30
+C0136,Dimitris,Nikolaou,dimitris.nikolaou136@mail.gr,M,1955-06-08,Ioannina,Epirus,Retail,2023-02-12
+C0137,Nikos,Nikolaou,nikos.nikolaou137@mail.gr,F,1954-07-16,Thessaloniki,Central Macedonia,Loyalty Gold,2024-03-16
+C0138,Nikos,Georgiou,nikos.georgiou138@mail.gr,F,1969-05-17,Thessaloniki,Central Macedonia,Loyalty Silver,2024-04-12
+C0139,Nikos,Christodoulou,nikos.christodoulou139@mail.gr,M,1962-12-25,Ioannina,Epirus,Retail,2022-05-14
+C0140,Katerina,Georgiou,,F,1982-02-20,Heraklion,Crete,Retail,2024-03-19
+C0141,Nikos,Oikonomou,nikos.oikonomou141@mail.gr,F,1987-10-08,IOANNINA ,Epirus,Retail,2023-06-23
+C0142,Petros,Nikolaou,petros.nikolaou142@mail.gr,F,1990-07-21,Athens,Attica,Loyalty Gold,2023-05-31
+C0143,Yannis,Papadopoulos,yannis.papadopoulos143@mail.gr,F,1955-06-17,Piraeus,Attica,Loyalty Silver,2023-05-06
+C0144,Sofia,Pappas,sofia.pappas144@mail.gr,F,1957-04-01,Ioannina,Epirus,Retail,2022-11-26
+C0145,Eleni,Nikolaou,eleni.nikolaou145@mail.gr,M,1984-03-04,Heraklion,Crete,Retail,2023-09-04
+C0146,Katerina,Karagiannis,katerina.karagiannis146@mail.gr,F,1969-04-16,Heraklion,Crete,Loyalty Silver,2023-03-17
+C0147,Nikos,Pappas,nikos.pappas147@mail.gr,F,1978-01-15,Patras,Western Greece,Retail,2023-03-14
+C0148,Ioanna,Vasileiou,ioanna.vasileiou148@mail.gr,M,1956-01-09,Thessaloniki,Central Macedonia,Retail,2022-04-04
+C0149,Giorgos,Nikolaou,giorgos.nikolaou149@mail.gr,F,1955-05-20,Ioannina,Epirus,Loyalty Gold,2023-08-24
+C0150,Anna,Christodoulou,anna.christodoulou150@mail.gr,M,1954-08-13,Heraklion,Crete,Retail,2022-10-22
+C0151,Katerina,Christodoulou,katerina.christodoulou151@mail.gr,M,1970-02-13,Heraklion,Crete,Retail,2024-05-17
+C0152,Dimitris,Makris,dimitris.makris152@mail.gr,F,1988-07-01,Athens,Attica,Retail,2024-05-15
+C0153,Yannis,Oikonomou,yannis.oikonomou153@mail.gr,M,1952-08-06,HERAKLION ,Crete,Loyalty Silver,2022-07-04
+C0154,Petros,Vasileiou,petros.vasileiou154@mail.gr,F,1985-12-15,Thessaloniki,Central Macedonia,Retail,2022-03-13
+C0155,Petros,Papadopoulos,petros.papadopoulos155@mail.gr,M,1990-09-13,Piraeus,Attica,Retail,2022-12-16
+C0156,Dimitris,Vasileiou,dimitris.vasileiou156@mail.gr,F,1954-09-20,Piraeus,Attica,Retail,2022-06-09
+C0157,Yannis,Papadopoulos,yannis.papadopoulos157@mail.gr,M,1989-08-28,Piraeus,Attica,Retail,2023-03-01
+C0158,Nikos,Makris,nikos.makris158@mail.gr,M,1997-04-10,Thessaloniki,Central Macedonia,Retail,2023-11-15
+C0159,Maria,Ioannou,maria.ioannou159@mail.gr,F,1977-01-15,Thessaloniki,Central Macedonia,Loyalty Gold,2022-08-05
+C0160,Eleni,Vasileiou,,M,1965-10-06,Ioannina,Epirus,Retail,2022-05-13
+C0161,Anna,Ioannou,anna.ioannou161@mail.gr,M,1956-06-19,Patras,Western Greece,Loyalty Silver,2023-02-11
+C0162,Petros,Papadopoulos,petros.papadopoulos162@mail.gr,M,1988-07-06,IOANNINA ,Epirus,Loyalty Gold,2023-08-11
+C0163,Petros,Pappas,,M,1965-06-02,Patras,Western Greece,Retail,2024-03-31
+C0164,Kostas,Christodoulou,kostas.christodoulou164@mail.gr,M,1985-12-04,Heraklion,Crete,Retail,2023-06-21
+C0165,Sofia,Vasileiou,sofia.vasileiou165@mail.gr,F,1995-10-19,Athens,Attica,Retail,2023-10-11
+C0166,Anna,Makris,anna.makris166@mail.gr,F,1971-03-14,Athens,Attica,Retail,2022-04-16
+C0167,Katerina,Ioannou,katerina.ioannou167@mail.gr,F,1965-11-22,Piraeus,Attica,Retail,2024-03-02
+C0168,Kostas,Karagiannis,kostas.karagiannis168@mail.gr,M,1978-05-13,Larissa,Thessaly,Loyalty Silver,2022-06-04
+C0169,Giorgos,Karagiannis,giorgos.karagiannis169@mail.gr,F,1981-07-29,Patras,Western Greece,Loyalty Gold,2023-06-04
+C0170,Katerina,Karagiannis,katerina.karagiannis170@mail.gr,M,1956-11-19,ATHENS ,Attica,Loyalty Gold,2023-10-23
+C0171,Giorgos,Oikonomou,giorgos.oikonomou171@mail.gr,F,1990-05-07,Ioannina,Epirus,Loyalty Silver,2024-04-09
+C0172,Ioanna,Ioannou,ioanna.ioannou172@mail.gr,F,1990-06-02,Heraklion,Crete,Retail,2022-04-16
+C0173,Dimitris,Nikolaou,dimitris.nikolaou173@mail.gr,M,1989-06-03,Ioannina,Epirus,Loyalty Silver,2023-06-21
+C0174,Yannis,Georgiou,yannis.georgiou174@mail.gr,M,1980-05-10,Heraklion,Crete,Retail,2023-11-27
+C0175,Maria,Christodoulou,maria.christodoulou175@mail.gr,M,1975-06-29,Heraklion,Crete,Retail,2022-09-16
+C0176,Ioanna,Oikonomou,ioanna.oikonomou176@mail.gr,F,1981-05-20,Larissa,Thessaly,Retail,2022-11-14
+C0177,Petros,Pappas,petros.pappas177@mail.gr,M,1983-10-18,Larissa,Thessaly,Retail,2023-10-21
+C0178,Dimitris,Georgiou,dimitris.georgiou178@mail.gr,M,1951-08-21,Ioannina,Epirus,Loyalty Silver,2023-01-07
+C0179,Eleni,Ioannou,eleni.ioannou179@mail.gr,F,1962-05-05,Thessaloniki,Central Macedonia,Retail,2022-06-08
+C0180,Katerina,Nikolaou,katerina.nikolaou180@mail.gr,F,1980-03-19,Athens,Attica,Loyalty Silver,2024-06-16
+C0181,Yannis,Georgiou,yannis.georgiou181@mail.gr,F,1989-04-07,Ioannina,Epirus,Loyalty Silver,2022-02-14
+C0182,Dimitris,Ioannou,dimitris.ioannou182@mail.gr,M,1970-12-29,Patras,Western Greece,Loyalty Gold,2023-07-01
+C0183,Katerina,Karagiannis,katerina.karagiannis183@mail.gr,M,1991-06-03,Piraeus,Attica,Retail,2024-02-27
+C0184,Sofia,Makris,sofia.makris184@mail.gr,F,1962-06-02,Thessaloniki,Central Macedonia,Loyalty Silver,2024-06-12
+C0185,Maria,Karagiannis,maria.karagiannis185@mail.gr,F,1975-07-29,Thessaloniki,Central Macedonia,Retail,2022-03-27
+C0186,Eleni,Vasileiou,eleni.vasileiou186@mail.gr,M,1958-03-25,Ioannina,Epirus,Loyalty Gold,2022-08-16
+C0187,Kostas,Christodoulou,kostas.christodoulou187@mail.gr,M,1971-02-25,Ioannina,Epirus,Retail,2023-01-31
+C0188,Dimitris,Ioannou,dimitris.ioannou188@mail.gr,M,1963-02-07,Athens,Attica,Retail,2022-05-21
+C0189,Katerina,Karagiannis,katerina.karagiannis189@mail.gr,F,1957-02-09,Athens,Attica,Retail,2022-01-20
+C0190,Nikos,Georgiou,nikos.georgiou190@mail.gr,M,1959-12-23,Thessaloniki,Central Macedonia,Loyalty Silver,2024-03-05
+C0191,Nikos,Vasileiou,nikos.vasileiou191@mail.gr,M,1955-08-21,THESSALONIKI ,Central Macedonia,Retail,2022-04-24
+C0192,Kostas,Oikonomou,kostas.oikonomou192@mail.gr,F,1962-11-18,IOANNINA ,Epirus,Loyalty Silver,2022-10-26
+C0193,Maria,Oikonomou,maria.oikonomou193@mail.gr,F,1996-12-18,Patras,Western Greece,Retail,2023-01-05
+C0194,Anna,Makris,anna.makris194@mail.gr,F,1985-01-11,Athens,Attica,Loyalty Silver,2024-06-13
+C0195,Maria,Pappas,,F,1980-12-07,Patras,Western Greece,Retail,2022-09-04
+C0196,Ioanna,Nikolaou,ioanna.nikolaou196@mail.gr,F,1981-08-10,Larissa,Thessaly,Loyalty Silver,2023-07-14
+C0197,Ioanna,Georgiou,ioanna.georgiou197@mail.gr,F,1962-02-05,Thessaloniki,Central Macedonia,Loyalty Gold,2022-03-06
+C0198,Kostas,Papadopoulos,kostas.papadopoulos198@mail.gr,F,1978-04-25,Larissa,Thessaly,Retail,2022-11-14
+C0199,Sofia,Makris,sofia.makris199@mail.gr,F,1975-09-02,Heraklion,Crete,Loyalty Gold,2023-01-01
+C0200,Maria,Christodoulou,maria.christodoulou200@mail.gr,M,1989-06-14,Ioannina,Epirus,Retail,2023-01-31
+C0201,Eleni,Karagiannis,eleni.karagiannis201@mail.gr,M,1957-05-31,Thessaloniki,Central Macedonia,Loyalty Gold,2024-01-15
+C0202,Giorgos,Pappas,giorgos.pappas202@mail.gr,M,1978-10-26,Patras,Western Greece,Loyalty Silver,2022-04-16
+C0203,Dimitris,Vasileiou,dimitris.vasileiou203@mail.gr,F,1989-10-28,Athens,Attica,Retail,2022-12-26
+C0204,Maria,Christodoulou,maria.christodoulou204@mail.gr,F,1956-09-24,Patras,Western Greece,Loyalty Silver,2023-11-19
+C0205,Sofia,Christodoulou,sofia.christodoulou205@mail.gr,F,1962-10-23,Larissa,Thessaly,Loyalty Silver,2024-05-19
+C0206,Ioanna,Karagiannis,ioanna.karagiannis206@mail.gr,M,1982-06-28,Heraklion,Crete,Retail,2023-01-28
+C0207,Maria,Oikonomou,maria.oikonomou207@mail.gr,M,1989-10-30,Heraklion,Crete,Retail,2024-02-21
+C0208,Yannis,Georgiou,yannis.georgiou208@mail.gr,M,1972-05-24,Athens,Attica,Loyalty Silver,2022-04-27
+C0209,Petros,Georgiou,petros.georgiou209@mail.gr,F,1973-06-26,Athens,Attica,Loyalty Gold,2024-03-04
+C0210,Petros,Karagiannis,petros.karagiannis210@mail.gr,M,1967-12-17,Thessaloniki,Central Macedonia,Retail,2022-05-06
+C0211,Giorgos,Karagiannis,giorgos.karagiannis211@mail.gr,F,1978-09-03,Piraeus,Attica,Retail,2023-11-15
+C0212,Petros,Nikolaou,petros.nikolaou212@mail.gr,F,1965-08-14,Thessaloniki,Central Macedonia,Loyalty Silver,2024-03-23
+C0213,Anna,Ioannou,anna.ioannou213@mail.gr,F,1994-04-28,Thessaloniki,Central Macedonia,Retail,2022-01-27
+C0214,Anna,Oikonomou,anna.oikonomou214@mail.gr,F,1957-09-26,Thessaloniki,Central Macedonia,Retail,2022-03-09
+C0215,Sofia,Karagiannis,sofia.karagiannis215@mail.gr,F,1961-03-30,Thessaloniki,Central Macedonia,Loyalty Silver,2022-11-21
+C0216,Giorgos,Karagiannis,giorgos.karagiannis216@mail.gr,F,1961-07-30,Larissa,Thessaly,Loyalty Gold,2023-03-20
+C0217,Maria,Nikolaou,maria.nikolaou217@mail.gr,M,1970-03-25,Heraklion,Crete,Loyalty Silver,2022-12-21
+C0218,Katerina,Nikolaou,katerina.nikolaou218@mail.gr,M,1961-03-25,Heraklion,Crete,Retail,2023-10-03
+C0219,Yannis,Makris,yannis.makris219@mail.gr,F,1965-05-11,Thessaloniki,Central Macedonia,Retail,2023-11-06
+C0220,Petros,Oikonomou,petros.oikonomou220@mail.gr,F,1957-04-15,Heraklion,Crete,Retail,2022-02-16
+C0221,Yannis,Vasileiou,yannis.vasileiou221@mail.gr,F,1994-09-06,Larissa,Thessaly,Retail,2023-10-05
+C0222,Katerina,Vasileiou,katerina.vasileiou222@mail.gr,M,1976-09-07,Heraklion,Crete,Loyalty Gold,2023-04-10
+C0223,Petros,Papadopoulos,petros.papadopoulos223@mail.gr,F,1980-07-09,Athens,Attica,Retail,2023-09-14
+C0224,Dimitris,Christodoulou,dimitris.christodoulou224@mail.gr,M,1996-03-14,Piraeus,Attica,Retail,2023-07-30
+C0225,Dimitris,Ioannou,dimitris.ioannou225@mail.gr,F,1958-09-08,Athens,Attica,Loyalty Gold,2022-02-21
+C0226,Sofia,Oikonomou,sofia.oikonomou226@mail.gr,F,1979-05-18,Thessaloniki,Central Macedonia,Loyalty Gold,2023-08-15
+C0227,Dimitris,Ioannou,dimitris.ioannou227@mail.gr,M,1977-09-06,Larissa,Thessaly,Retail,2023-05-25
+C0228,Giorgos,Pappas,giorgos.pappas228@mail.gr,M,1954-05-14,Athens,Attica,Loyalty Silver,2022-02-21
+C0229,Kostas,Oikonomou,,F,1988-08-29,Thessaloniki,Central Macedonia,Loyalty Gold,2022-05-18
+C0230,Petros,Christodoulou,petros.christodoulou230@mail.gr,F,1982-07-11,Thessaloniki,Central Macedonia,Loyalty Gold,2023-07-21
+C0231,Giorgos,Pappas,giorgos.pappas231@mail.gr,F,1961-07-18,Thessaloniki,Central Macedonia,Loyalty Silver,2022-04-10
+C0232,Dimitris,Christodoulou,dimitris.christodoulou232@mail.gr,F,1995-09-04,Patras,Western Greece,Loyalty Silver,2023-02-16
+C0233,Maria,Papadopoulos,maria.papadopoulos233@mail.gr,M,1996-08-04,Heraklion,Crete,Retail,2023-04-13
+C0234,Yannis,Makris,yannis.makris234@mail.gr,F,1985-04-03,Piraeus,Attica,Retail,2023-09-24
+C0235,Katerina,Oikonomou,katerina.oikonomou235@mail.gr,M,1976-11-23,Larissa,Thessaly,Retail,2023-05-02
+C0236,Maria,Christodoulou,maria.christodoulou236@mail.gr,M,1952-05-23,Ioannina,Epirus,Retail,2023-09-04
+C0237,Katerina,Oikonomou,katerina.oikonomou237@mail.gr,M,1965-04-19,Patras,Western Greece,Loyalty Silver,2023-06-21
+C0238,Petros,Oikonomou,petros.oikonomou238@mail.gr,F,1959-11-11,Larissa,Thessaly,Loyalty Gold,2022-07-15
+C0239,Kostas,Christodoulou,kostas.christodoulou239@mail.gr,M,1995-01-08,Athens,Attica,Loyalty Gold,2024-03-04
+C0240,Kostas,Papadopoulos,kostas.papadopoulos240@mail.gr,M,1997-02-21,Heraklion,Crete,Retail,2023-01-21
+C0241,Eleni,Karagiannis,eleni.karagiannis241@mail.gr,M,1993-06-09,Thessaloniki,Central Macedonia,Loyalty Silver,2022-07-16
+C0242,Katerina,Makris,katerina.makris242@mail.gr,M,1975-12-06,Piraeus,Attica,Retail,2023-12-23
+C0243,Petros,Karagiannis,petros.karagiannis243@mail.gr,M,1975-10-27,Piraeus,Attica,Retail,2022-05-05
+C0244,Ioanna,Makris,ioanna.makris244@mail.gr,M,1963-02-21,Heraklion,Crete,Loyalty Gold,2022-10-25
+C0245,Katerina,Nikolaou,katerina.nikolaou245@mail.gr,M,1969-03-13,Athens,Attica,Retail,2022-07-26
+C0246,Anna,Vasileiou,anna.vasileiou246@mail.gr,F,1971-10-02,Ioannina,Epirus,Loyalty Silver,2022-02-21
+C0247,Anna,Ioannou,anna.ioannou247@mail.gr,M,1959-01-08,Larissa,Thessaly,Retail,2023-11-29
+C0248,Eleni,Papadopoulos,eleni.papadopoulos248@mail.gr,M,1992-11-01,Ioannina,Epirus,Loyalty Silver,2023-10-29
+C0249,Katerina,Christodoulou,katerina.christodoulou249@mail.gr,F,1970-11-01,Piraeus,Attica,Retail,2023-07-02
+C0250,Petros,Papadopoulos,petros.papadopoulos250@mail.gr,F,1985-08-13,Larissa,Thessaly,Retail,2024-03-17
+C0251,Eleni,Vasileiou,eleni.vasileiou251@mail.gr,F,1980-01-22,PATRAS ,Western Greece,Retail,2022-10-19
+C0252,Ioanna,Makris,ioanna.makris252@mail.gr,M,1974-06-24,Patras,Western Greece,Loyalty Silver,2022-07-17
+C0253,Giorgos,Christodoulou,giorgos.christodoulou253@mail.gr,F,1951-04-07,Ioannina,Epirus,Retail,2024-01-25
+C0254,Katerina,Oikonomou,katerina.oikonomou254@mail.gr,M,1988-05-15,Thessaloniki,Central Macedonia,Retail,2023-06-12
+C0255,Giorgos,Pappas,giorgos.pappas255@mail.gr,M,1972-04-03,Thessaloniki,Central Macedonia,Retail,2022-01-07
+C0256,Sofia,Ioannou,sofia.ioannou256@mail.gr,M,1951-01-10,Thessaloniki,Central Macedonia,Loyalty Gold,2022-09-25
+C0257,Dimitris,Ioannou,dimitris.ioannou257@mail.gr,F,1986-05-16,Larissa,Thessaly,Retail,2023-12-04
+C0258,Petros,Vasileiou,petros.vasileiou258@mail.gr,M,1969-10-24,Heraklion,Crete,Retail,2022-08-13
+C0259,Kostas,Georgiou,kostas.georgiou259@mail.gr,M,1999-04-11,Piraeus,Attica,Loyalty Gold,2023-04-28
+C0260,Anna,Ioannou,anna.ioannou260@mail.gr,F,1997-02-22,Ioannina,Epirus,Retail,2023-04-03
+C0261,Petros,Christodoulou,petros.christodoulou261@mail.gr,F,1998-02-23,Heraklion,Crete,Retail,2022-06-03
+C0262,Dimitris,Makris,dimitris.makris262@mail.gr,M,1958-02-27,Piraeus,Attica,Loyalty Gold,2023-06-07
+C0263,Maria,Karagiannis,maria.karagiannis263@mail.gr,F,1991-06-26,Patras,Western Greece,Retail,2023-11-20
+C0264,Katerina,Papadopoulos,,F,1956-07-21,Ioannina,Epirus,Loyalty Gold,2022-02-16
+C0265,Dimitris,Nikolaou,dimitris.nikolaou265@mail.gr,F,1992-05-08,Patras,Western Greece,Loyalty Silver,2022-02-02
+C0266,Sofia,Georgiou,sofia.georgiou266@mail.gr,M,1983-08-06,Thessaloniki,Central Macedonia,Retail,2023-01-27
+C0267,Sofia,Pappas,sofia.pappas267@mail.gr,F,1981-03-14,Patras,Western Greece,Retail,2022-05-02
+C0268,Anna,Pappas,anna.pappas268@mail.gr,F,1952-01-15,Piraeus,Attica,Loyalty Silver,2022-11-02
+C0269,Ioanna,Makris,ioanna.makris269@mail.gr,F,1991-04-29,Patras,Western Greece,Loyalty Gold,2022-12-21
+C0270,Katerina,Ioannou,katerina.ioannou270@mail.gr,F,1971-08-05,PIRAEUS ,Attica,Retail,2022-07-31
+C0271,Giorgos,Oikonomou,giorgos.oikonomou271@mail.gr,F,1971-12-16,Athens,Attica,Retail,2024-01-29
+C0272,Sofia,Karagiannis,sofia.karagiannis272@mail.gr,F,1962-07-28,Athens,Attica,Retail,2023-05-31
+C0273,Nikos,Oikonomou,nikos.oikonomou273@mail.gr,M,1971-04-03,Thessaloniki,Central Macedonia,Retail,2022-11-06
+C0274,Ioanna,Makris,ioanna.makris274@mail.gr,F,1988-04-29,Piraeus,Attica,Retail,2023-07-24
+C0275,Maria,Christodoulou,maria.christodoulou275@mail.gr,M,1986-08-17,Patras,Western Greece,Loyalty Gold,2022-06-02
+C0276,Sofia,Georgiou,sofia.georgiou276@mail.gr,M,1962-12-14,Thessaloniki,Central Macedonia,Loyalty Silver,2024-04-05
+C0277,Maria,Makris,maria.makris277@mail.gr,F,1984-11-05,Patras,Western Greece,Loyalty Gold,2022-09-06
+C0278,Nikos,Christodoulou,nikos.christodoulou278@mail.gr,F,1998-01-20,Thessaloniki,Central Macedonia,Retail,2024-01-12
+C0279,Nikos,Papadopoulos,nikos.papadopoulos279@mail.gr,F,1956-07-12,Ioannina,Epirus,Retail,2022-07-12
+C0280,Yannis,Makris,yannis.makris280@mail.gr,M,1977-03-14,Ioannina,Epirus,Retail,2022-01-16
+C0281,Nikos,Nikolaou,nikos.nikolaou281@mail.gr,F,1985-08-01,Piraeus,Attica,Loyalty Gold,2022-09-03
+C0282,Dimitris,Vasileiou,dimitris.vasileiou282@mail.gr,M,1973-06-19,Heraklion,Crete,Loyalty Gold,2023-01-04
+C0283,Kostas,Karagiannis,kostas.karagiannis283@mail.gr,M,1968-03-23,Heraklion,Crete,Retail,2023-01-15
+C0284,Sofia,Papadopoulos,sofia.papadopoulos284@mail.gr,F,1973-05-25,Thessaloniki,Central Macedonia,Loyalty Silver,2023-07-21
+C0285,Yannis,Pappas,yannis.pappas285@mail.gr,M,1972-01-18,Heraklion,Crete,Retail,2023-05-27
+C0286,Ioanna,Christodoulou,ioanna.christodoulou286@mail.gr,M,1991-05-06,Heraklion,Crete,Retail,2022-06-22
+C0287,Dimitris,Georgiou,dimitris.georgiou287@mail.gr,F,1997-01-02,Larissa,Thessaly,Retail,2022-02-04
+C0288,Giorgos,Papadopoulos,giorgos.papadopoulos288@mail.gr,F,1956-02-06,Ioannina,Epirus,Retail,2023-12-26
+C0289,Maria,Ioannou,maria.ioannou289@mail.gr,M,1993-10-08,Piraeus,Attica,Loyalty Silver,2022-01-17
+C0290,Anna,Makris,anna.makris290@mail.gr,M,1998-01-24,ATHENS ,Attica,Loyalty Gold,2022-10-21
+C0291,Anna,Pappas,anna.pappas291@mail.gr,F,1971-08-15,Athens,Attica,Retail,2022-07-16
+C0292,Anna,Vasileiou,anna.vasileiou292@mail.gr,M,1986-06-05,Heraklion,Crete,Retail,2023-04-16
+C0293,Nikos,Ioannou,nikos.ioannou293@mail.gr,F,1958-05-22,Heraklion,Crete,Retail,2023-02-20
+C0294,Sofia,Makris,,F,1957-06-02,Patras,Western Greece,Loyalty Gold,2023-05-27
+C0295,Sofia,Christodoulou,sofia.christodoulou295@mail.gr,F,1970-08-12,Ioannina,Epirus,Loyalty Silver,2022-08-05
+C0296,Petros,Oikonomou,petros.oikonomou296@mail.gr,M,1998-09-20,Ioannina,Epirus,Loyalty Gold,2023-08-01
+C0297,Maria,Georgiou,maria.georgiou297@mail.gr,F,1985-09-25,LARISSA ,Thessaly,Retail,2022-03-20
+C0298,Eleni,Oikonomou,eleni.oikonomou298@mail.gr,M,1984-06-08,Thessaloniki,Central Macedonia,Retail,2024-02-13
+C0299,Eleni,Nikolaou,eleni.nikolaou299@mail.gr,F,1989-03-19,Larissa,Thessaly,Loyalty Silver,2022-08-26
+C0300,Giorgos,Christodoulou,giorgos.christodoulou300@mail.gr,M,1979-04-13,Ioannina,Epirus,Loyalty Silver,2022-01-31
+C0301,Katerina,Karagiannis,katerina.karagiannis301@mail.gr,M,1988-09-28,Larissa,Thessaly,Loyalty Gold,2022-07-10
+C0302,Yannis,Pappas,yannis.pappas302@mail.gr,F,1956-08-05,Larissa,Thessaly,Retail,2022-03-26
+C0303,Eleni,Pappas,eleni.pappas303@mail.gr,F,1958-03-18,Thessaloniki,Central Macedonia,Retail,2022-01-06
+C0304,Kostas,Christodoulou,kostas.christodoulou304@mail.gr,M,1990-04-08,Thessaloniki,Central Macedonia,Retail,2023-07-25
+C0305,Anna,Pappas,anna.pappas305@mail.gr,F,1979-02-08,HERAKLION ,Crete,Retail,2024-06-03
+C0306,Maria,Vasileiou,maria.vasileiou306@mail.gr,F,1996-10-01,Patras,Western Greece,Loyalty Gold,2022-06-23
+C0307,Sofia,Georgiou,sofia.georgiou307@mail.gr,F,1955-09-05,Larissa,Thessaly,Retail,2022-06-21
+C0308,Katerina,Pappas,katerina.pappas308@mail.gr,M,1972-02-15,Patras,Western Greece,Retail,2024-01-09
+C0309,Kostas,Oikonomou,kostas.oikonomou309@mail.gr,M,1950-08-10,Larissa,Thessaly,Loyalty Silver,2023-02-10
+C0310,Yannis,Pappas,yannis.pappas310@mail.gr,F,1976-12-14,Thessaloniki,Central Macedonia,Retail,2022-11-25
+C0311,Petros,Ioannou,petros.ioannou311@mail.gr,M,1976-02-24,Heraklion,Crete,Loyalty Gold,2024-01-23
+C0312,Ioanna,Karagiannis,ioanna.karagiannis312@mail.gr,M,1985-04-02,Larissa,Thessaly,Loyalty Silver,2023-01-09
+C0313,Yannis,Ioannou,yannis.ioannou313@mail.gr,F,1991-06-01,Athens,Attica,Loyalty Silver,2023-12-27
+C0314,Kostas,Vasileiou,kostas.vasileiou314@mail.gr,M,1994-10-18,Piraeus,Attica,Retail,2022-05-23
+C0315,Katerina,Ioannou,katerina.ioannou315@mail.gr,M,1956-08-20,Larissa,Thessaly,Retail,2023-04-05
+C0316,Kostas,Oikonomou,kostas.oikonomou316@mail.gr,M,1998-10-10,Heraklion,Crete,Loyalty Gold,2022-02-07
+C0317,Dimitris,Makris,dimitris.makris317@mail.gr,F,1981-11-06,Ioannina,Epirus,Loyalty Silver,2022-06-20
+C0318,Yannis,Papadopoulos,yannis.papadopoulos318@mail.gr,M,1979-10-01,Larissa,Thessaly,Loyalty Silver,2024-03-26
+C0319,Giorgos,Papadopoulos,giorgos.papadopoulos319@mail.gr,F,1989-12-29,Patras,Western Greece,Retail,2023-01-19
+C0320,Kostas,Oikonomou,kostas.oikonomou320@mail.gr,M,1959-05-19,Patras,Western Greece,Loyalty Silver,2022-10-30
+C0321,Giorgos,Nikolaou,giorgos.nikolaou321@mail.gr,F,1996-10-01,Patras,Western Greece,Retail,2023-05-10
+C0322,Kostas,Nikolaou,kostas.nikolaou322@mail.gr,F,1976-12-09,Thessaloniki,Central Macedonia,Loyalty Gold,2022-02-15
+C0323,Petros,Nikolaou,petros.nikolaou323@mail.gr,F,1971-11-19,Ioannina,Epirus,Retail,2023-06-13
+C0324,Anna,Georgiou,anna.georgiou324@mail.gr,F,1986-05-04,Piraeus,Attica,Retail,2023-10-07
+C0325,Eleni,Pappas,eleni.pappas325@mail.gr,F,1990-05-02,PIRAEUS ,Attica,Loyalty Gold,2023-08-30
+C0326,Sofia,Papadopoulos,sofia.papadopoulos326@mail.gr,F,1959-02-17,Patras,Western Greece,Retail,2024-03-29
+C0327,Anna,Georgiou,anna.georgiou327@mail.gr,M,1993-11-30,Ioannina,Epirus,Retail,2023-06-25
+C0328,Dimitris,Oikonomou,dimitris.oikonomou328@mail.gr,M,1981-07-30,Larissa,Thessaly,Loyalty Gold,2024-05-15
+C0329,Yannis,Georgiou,yannis.georgiou329@mail.gr,F,1978-02-05,Patras,Western Greece,Retail,2022-05-01
+C0330,Katerina,Nikolaou,katerina.nikolaou330@mail.gr,M,1987-07-10,Piraeus,Attica,Retail,2023-09-03
+C0331,Yannis,Pappas,yannis.pappas331@mail.gr,F,1964-12-20,Piraeus,Attica,Loyalty Gold,2023-05-17
+C0332,Eleni,Georgiou,eleni.georgiou332@mail.gr,M,1950-11-11,Thessaloniki,Central Macedonia,Retail,2023-05-12
+C0333,Nikos,Pappas,nikos.pappas333@mail.gr,M,1987-04-16,Piraeus,Attica,Loyalty Silver,2023-12-29
+C0334,Kostas,Karagiannis,kostas.karagiannis334@mail.gr,F,1976-03-16,Ioannina,Epirus,Retail,2022-02-03
+C0335,Nikos,Makris,nikos.makris335@mail.gr,M,1995-10-30,Thessaloniki,Central Macedonia,Retail,2022-04-26
+C0336,Giorgos,Vasileiou,giorgos.vasileiou336@mail.gr,F,1989-08-06,Heraklion,Crete,Loyalty Silver,2023-07-14
+C0337,Sofia,Nikolaou,sofia.nikolaou337@mail.gr,M,1973-07-30,Piraeus,Attica,Retail,2022-12-23
+C0338,Giorgos,Karagiannis,giorgos.karagiannis338@mail.gr,M,1988-05-31,Ioannina,Epirus,Retail,2022-06-19
+C0339,Eleni,Ioannou,eleni.ioannou339@mail.gr,M,1998-05-03,Heraklion,Crete,Retail,2022-06-22
+C0340,Petros,Vasileiou,petros.vasileiou340@mail.gr,F,1962-03-01,Thessaloniki,Central Macedonia,Retail,2024-02-08
+C0341,Sofia,Papadopoulos,sofia.papadopoulos341@mail.gr,F,1972-05-26,Ioannina,Epirus,Retail,2022-05-30
+C0342,Dimitris,Ioannou,dimitris.ioannou342@mail.gr,M,1987-03-01,Larissa,Thessaly,Loyalty Gold,2023-01-20
+C0343,Giorgos,Nikolaou,giorgos.nikolaou343@mail.gr,M,1990-10-17,Patras,Western Greece,Loyalty Gold,2023-05-15
+C0344,Yannis,Papadopoulos,yannis.papadopoulos344@mail.gr,M,1955-09-07,Thessaloniki,Central Macedonia,Retail,2024-03-25
+C0345,Sofia,Ioannou,sofia.ioannou345@mail.gr,M,1975-06-11,Heraklion,Crete,Loyalty Gold,2022-12-12
+C0346,Yannis,Georgiou,yannis.georgiou346@mail.gr,F,1954-02-14,Heraklion,Crete,Loyalty Silver,2022-04-12
+C0347,Kostas,Papadopoulos,kostas.papadopoulos347@mail.gr,M,1950-01-23,Larissa,Thessaly,Retail,2023-03-15
+C0348,Petros,Georgiou,petros.georgiou348@mail.gr,M,1958-05-17,Piraeus,Attica,Retail,2023-11-02
+C0349,Katerina,Nikolaou,katerina.nikolaou349@mail.gr,F,1985-07-23,Thessaloniki,Central Macedonia,Retail,2023-10-03
+C0350,Petros,Ioannou,petros.ioannou350@mail.gr,F,1969-02-23,Thessaloniki,Central Macedonia,Loyalty Gold,2023-05-04
+C0351,Eleni,Oikonomou,eleni.oikonomou351@mail.gr,F,1980-10-28,Athens,Attica,Retail,2024-04-16
+C0352,Sofia,Georgiou,sofia.georgiou352@mail.gr,F,1959-04-05,Athens,Attica,Loyalty Gold,2022-11-17
+C0353,Katerina,Georgiou,katerina.georgiou353@mail.gr,F,1962-10-26,Thessaloniki,Central Macedonia,Loyalty Gold,2022-03-12
+C0354,Yannis,Papadopoulos,yannis.papadopoulos354@mail.gr,F,1963-08-01,Heraklion,Crete,Loyalty Silver,2023-02-26
+C0355,Ioanna,Karagiannis,ioanna.karagiannis355@mail.gr,F,1984-06-14,Heraklion,Crete,Retail,2022-12-26
+C0356,Dimitris,Georgiou,dimitris.georgiou356@mail.gr,M,1952-05-28,Patras,Western Greece,Retail,2024-05-18
+C0357,Ioanna,Vasileiou,ioanna.vasileiou357@mail.gr,M,1976-07-07,Ioannina,Epirus,Retail,2023-10-24
+C0358,Nikos,Karagiannis,nikos.karagiannis358@mail.gr,F,1997-05-24,Athens,Attica,Loyalty Gold,2022-01-13
+C0359,Dimitris,Georgiou,dimitris.georgiou359@mail.gr,M,1999-01-07,Thessaloniki,Central Macedonia,Loyalty Gold,2023-12-01
+C0360,Kostas,Nikolaou,,F,1953-07-29,Piraeus,Attica,Retail,2022-03-03
+C0361,Sofia,Makris,sofia.makris361@mail.gr,M,1988-01-01,Ioannina,Epirus,Retail,2023-12-20
+C0362,Giorgos,Makris,giorgos.makris362@mail.gr,M,1957-02-02,Patras,Western Greece,Loyalty Silver,2023-06-08
+C0363,Eleni,Makris,eleni.makris363@mail.gr,F,1977-10-29,Piraeus,Attica,Retail,2023-12-17
+C0364,Petros,Ioannou,petros.ioannou364@mail.gr,F,1990-09-04,Patras,Western Greece,Retail,2023-09-19
+C0365,Maria,Vasileiou,maria.vasileiou365@mail.gr,F,1964-09-12,Heraklion,Crete,Retail,2023-05-24
+C0366,Anna,Makris,anna.makris366@mail.gr,M,1960-08-04,Thessaloniki,Central Macedonia,Retail,2024-02-29
+C0367,Dimitris,Pappas,dimitris.pappas367@mail.gr,F,1994-07-06,Athens,Attica,Retail,2023-04-12
+C0368,Dimitris,Papadopoulos,dimitris.papadopoulos368@mail.gr,F,1972-11-20,Heraklion,Crete,Loyalty Gold,2024-03-02
+C0369,Yannis,Nikolaou,,F,1971-12-10,Athens,Attica,Retail,2022-02-17
+C0370,Dimitris,Pappas,dimitris.pappas370@mail.gr,F,1987-08-16,Patras,Western Greece,Retail,2022-08-18
+C0371,Nikos,Pappas,nikos.pappas371@mail.gr,M,1960-09-17,Thessaloniki,Central Macedonia,Retail,2023-05-30
+C0372,Maria,Georgiou,maria.georgiou372@mail.gr,M,1956-03-08,Larissa,Thessaly,Retail,2024-06-17
+C0373,Katerina,Vasileiou,katerina.vasileiou373@mail.gr,M,1968-01-02,Patras,Western Greece,Retail,2022-10-26
+C0374,Katerina,Oikonomou,katerina.oikonomou374@mail.gr,M,1967-07-14,Heraklion,Crete,Retail,2024-01-21
+C0375,Nikos,Georgiou,,M,1950-11-11,Heraklion,Crete,Retail,2022-12-10
+C0376,Ioanna,Pappas,ioanna.pappas376@mail.gr,F,1987-08-31,Athens,Attica,Retail,2023-05-19
+C0377,Eleni,Vasileiou,eleni.vasileiou377@mail.gr,M,1983-06-02,ATHENS ,Attica,Retail,2023-04-15
+C0378,Giorgos,Oikonomou,giorgos.oikonomou378@mail.gr,M,1956-09-18,Larissa,Thessaly,Retail,2023-08-30
+C0379,Maria,Pappas,maria.pappas379@mail.gr,M,1985-04-03,Heraklion,Crete,Retail,2023-12-19
+C0380,Petros,Christodoulou,petros.christodoulou380@mail.gr,F,1962-03-19,Ioannina,Epirus,Retail,2024-03-09
+C0381,Yannis,Nikolaou,yannis.nikolaou381@mail.gr,M,1986-06-21,Ioannina,Epirus,Retail,2022-05-04
+C0382,Dimitris,Ioannou,dimitris.ioannou382@mail.gr,F,1958-02-10,Heraklion,Crete,Loyalty Gold,2022-06-11
+C0383,Ioanna,Vasileiou,ioanna.vasileiou383@mail.gr,M,1963-04-23,IOANNINA ,Epirus,Loyalty Silver,2022-04-04
+C0384,Nikos,Christodoulou,nikos.christodoulou384@mail.gr,M,1965-08-07,Larissa,Thessaly,Loyalty Gold,2022-02-01
+C0385,Kostas,Makris,kostas.makris385@mail.gr,F,1960-11-23,Patras,Western Greece,Loyalty Silver,2022-01-13
+C0386,Nikos,Georgiou,nikos.georgiou386@mail.gr,F,1973-03-22,Athens,Attica,Retail,2024-04-12
+C0387,Maria,Nikolaou,maria.nikolaou387@mail.gr,F,1958-04-02,Athens,Attica,Retail,2024-05-17
+C0388,Dimitris,Nikolaou,dimitris.nikolaou388@mail.gr,M,1985-06-09,Ioannina,Epirus,Retail,2023-05-24
+C0389,Sofia,Pappas,sofia.pappas389@mail.gr,M,1975-02-09,Athens,Attica,Retail,2023-04-02
+C0390,Maria,Oikonomou,maria.oikonomou390@mail.gr,M,1986-12-18,Piraeus,Attica,Loyalty Silver,2023-07-18
+C0391,Maria,Nikolaou,maria.nikolaou391@mail.gr,F,1998-10-10,Patras,Western Greece,Retail,2024-03-24
+C0392,Sofia,Christodoulou,sofia.christodoulou392@mail.gr,M,1984-11-04,Athens,Attica,Loyalty Gold,2022-10-04
+C0393,Maria,Christodoulou,maria.christodoulou393@mail.gr,M,1955-04-04,Piraeus,Attica,Loyalty Silver,2024-04-08
+C0394,Anna,Christodoulou,anna.christodoulou394@mail.gr,F,1972-03-27,Patras,Western Greece,Loyalty Silver,2023-11-04
+C0395,Katerina,Makris,katerina.makris395@mail.gr,M,1981-10-31,Piraeus,Attica,Retail,2024-05-09
+C0396,Eleni,Georgiou,eleni.georgiou396@mail.gr,M,1952-07-13,Ioannina,Epirus,Retail,2023-12-22
+C0397,Dimitris,Oikonomou,dimitris.oikonomou397@mail.gr,M,1998-08-21,Larissa,Thessaly,Loyalty Silver,2022-11-13
+C0398,Kostas,Papadopoulos,kostas.papadopoulos398@mail.gr,F,1997-03-25,Piraeus,Attica,Retail,2023-05-05
+C0399,Dimitris,Oikonomou,dimitris.oikonomou399@mail.gr,F,1979-01-12,Athens,Attica,Retail,2022-03-02
+C0400,Eleni,Oikonomou,eleni.oikonomou400@mail.gr,M,1956-07-04,Athens,Attica,Retail,2023-01-18
+C0401,Ioanna,Pappas,ioanna.pappas401@mail.gr,F,1964-02-18,Larissa,Thessaly,Loyalty Silver,2024-01-20
+C0402,Ioanna,Karagiannis,ioanna.karagiannis402@mail.gr,M,1970-01-11,Patras,Western Greece,Retail,2023-11-13
+C0403,Eleni,Pappas,eleni.pappas403@mail.gr,F,1950-02-28,Heraklion,Crete,Retail,2023-12-20
+C0404,Sofia,Oikonomou,sofia.oikonomou404@mail.gr,F,1959-05-05,Heraklion,Crete,Retail,2023-05-24
+C0405,Dimitris,Nikolaou,dimitris.nikolaou405@mail.gr,F,1980-02-14,Piraeus,Attica,Retail,2023-04-03
+C0406,Katerina,Ioannou,katerina.ioannou406@mail.gr,F,1950-02-11,Athens,Attica,Retail,2022-02-19
+C0407,Kostas,Pappas,kostas.pappas407@mail.gr,M,1981-07-06,Patras,Western Greece,Retail,2023-07-14
+C0408,Giorgos,Karagiannis,giorgos.karagiannis408@mail.gr,F,1990-06-27,Patras,Western Greece,Loyalty Silver,2022-03-17
+C0409,Maria,Vasileiou,maria.vasileiou409@mail.gr,F,1980-08-31,Ioannina,Epirus,Retail,2022-06-24
+C0410,Eleni,Nikolaou,eleni.nikolaou410@mail.gr,M,1993-04-23,Patras,Western Greece,Loyalty Silver,2023-12-23
+C0411,Sofia,Georgiou,sofia.georgiou411@mail.gr,F,1979-09-15,Athens,Attica,Loyalty Silver,2022-07-30
+C0412,Sofia,Makris,sofia.makris412@mail.gr,F,1958-08-09,Piraeus,Attica,Loyalty Silver,2022-02-20
+C0413,Yannis,Makris,yannis.makris413@mail.gr,M,1957-11-11,Patras,Western Greece,Loyalty Gold,2022-10-29
+C0414,Ioanna,Oikonomou,,F,1976-03-07,Ioannina,Epirus,Loyalty Gold,2022-03-25
+C0415,Giorgos,Vasileiou,giorgos.vasileiou415@mail.gr,M,1958-03-06,Patras,Western Greece,Loyalty Gold,2023-10-20
+C0416,Sofia,Georgiou,sofia.georgiou416@mail.gr,M,1954-01-02,Heraklion,Crete,Retail,2022-09-27
+C0417,Kostas,Vasileiou,kostas.vasileiou417@mail.gr,F,1958-09-04,Patras,Western Greece,Retail,2022-03-29
+C0418,Dimitris,Makris,dimitris.makris418@mail.gr,F,1984-09-23,Larissa,Thessaly,Loyalty Gold,2024-04-18
+C0419,Sofia,Makris,sofia.makris419@mail.gr,M,1957-01-31,Heraklion,Crete,Loyalty Gold,2023-02-09
+C0420,Petros,Papadopoulos,petros.papadopoulos420@mail.gr,F,1960-10-16,Ioannina,Epirus,Loyalty Silver,2024-02-15
+C0421,Eleni,Georgiou,eleni.georgiou421@mail.gr,M,1957-01-11,Patras,Western Greece,Retail,2023-12-01
+C0422,Nikos,Georgiou,nikos.georgiou422@mail.gr,F,1957-10-22,Patras,Western Greece,Loyalty Silver,2023-02-02
+C0423,Sofia,Makris,sofia.makris423@mail.gr,F,1996-11-18,Heraklion,Crete,Retail,2024-03-11
+C0424,Giorgos,Pappas,giorgos.pappas424@mail.gr,F,1959-06-24,Patras,Western Greece,Retail,2023-07-31
+C0425,Giorgos,Vasileiou,giorgos.vasileiou425@mail.gr,M,1984-05-13,Ioannina,Epirus,Loyalty Silver,2023-11-02
+C0426,Yannis,Oikonomou,yannis.oikonomou426@mail.gr,F,1986-01-15,PATRAS ,Western Greece,Loyalty Gold,2022-02-09
+C0427,Dimitris,Ioannou,dimitris.ioannou427@mail.gr,M,1951-10-25,Patras,Western Greece,Retail,2022-12-12
+C0428,Katerina,Vasileiou,katerina.vasileiou428@mail.gr,F,1970-06-14,Ioannina,Epirus,Retail,2022-05-18
+C0429,Petros,Karagiannis,petros.karagiannis429@mail.gr,F,1966-11-11,Thessaloniki,Central Macedonia,Retail,2023-03-29
+C0430,Sofia,Karagiannis,sofia.karagiannis430@mail.gr,F,1955-11-21,Piraeus,Attica,Loyalty Silver,2022-11-15
+C0431,Anna,Pappas,anna.pappas431@mail.gr,F,1965-08-03,Larissa,Thessaly,Retail,2022-07-17
+C0432,Nikos,Papadopoulos,nikos.papadopoulos432@mail.gr,M,1967-11-12,IOANNINA ,Epirus,Retail,2022-10-08
+C0433,Kostas,Makris,kostas.makris433@mail.gr,F,1971-09-15,Thessaloniki,Central Macedonia,Loyalty Gold,2023-01-17
+C0434,Yannis,Karagiannis,yannis.karagiannis434@mail.gr,M,1980-11-19,Patras,Western Greece,Retail,2022-06-17
+C0435,Katerina,Nikolaou,katerina.nikolaou435@mail.gr,F,1969-11-10,IOANNINA ,Epirus,Retail,2023-10-25
+C0436,Ioanna,Ioannou,ioanna.ioannou436@mail.gr,F,1992-07-14,Piraeus,Attica,Retail,2022-05-16
+C0437,Eleni,Oikonomou,eleni.oikonomou437@mail.gr,M,1974-09-15,Larissa,Thessaly,Retail,2023-03-10
+C0438,Dimitris,Karagiannis,dimitris.karagiannis438@mail.gr,M,1959-03-07,Patras,Western Greece,Retail,2022-01-08
+C0439,Ioanna,Christodoulou,ioanna.christodoulou439@mail.gr,M,1959-09-13,Heraklion,Crete,Loyalty Silver,2023-05-09
+C0440,Dimitris,Vasileiou,dimitris.vasileiou440@mail.gr,M,1966-11-25,Athens,Attica,Retail,2022-06-03
+C0441,Nikos,Papadopoulos,nikos.papadopoulos441@mail.gr,F,1952-04-14,Heraklion,Crete,Loyalty Silver,2023-11-03
+C0442,Katerina,Vasileiou,katerina.vasileiou442@mail.gr,F,1980-10-14,Patras,Western Greece,Loyalty Gold,2024-01-14
+C0443,Nikos,Makris,nikos.makris443@mail.gr,M,1965-04-02,Larissa,Thessaly,Loyalty Gold,2024-05-10
+C0444,Anna,Georgiou,anna.georgiou444@mail.gr,M,1966-06-04,Larissa,Thessaly,Retail,2023-11-28
+C0445,Ioanna,Nikolaou,ioanna.nikolaou445@mail.gr,M,1987-09-22,Thessaloniki,Central Macedonia,Retail,2024-03-18
+C0446,Dimitris,Vasileiou,dimitris.vasileiou446@mail.gr,M,1954-10-25,Thessaloniki,Central Macedonia,Loyalty Silver,2024-06-06
+C0447,Yannis,Oikonomou,yannis.oikonomou447@mail.gr,F,1984-03-29,Larissa,Thessaly,Loyalty Silver,2023-06-27
+C0448,Sofia,Papadopoulos,sofia.papadopoulos448@mail.gr,M,1991-01-19,Thessaloniki,Central Macedonia,Retail,2022-05-27
+C0449,Petros,Georgiou,petros.georgiou449@mail.gr,F,1978-02-12,Thessaloniki,Central Macedonia,Retail,2023-10-12
+C0450,Maria,Karagiannis,maria.karagiannis450@mail.gr,F,1993-12-03,Athens,Attica,Retail,2024-03-15
+C0451,Giorgos,Georgiou,giorgos.georgiou451@mail.gr,M,1992-10-30,Ioannina,Epirus,Loyalty Silver,2023-01-28
+C0452,Maria,Makris,maria.makris452@mail.gr,M,1997-08-22,Athens,Attica,Retail,2022-07-15
+C0453,Ioanna,Papadopoulos,ioanna.papadopoulos453@mail.gr,M,1961-07-26,Athens,Attica,Retail,2022-04-16
+C0454,Anna,Oikonomou,anna.oikonomou454@mail.gr,M,1976-02-03,Patras,Western Greece,Retail,2023-04-12
+C0455,Anna,Oikonomou,anna.oikonomou455@mail.gr,F,1980-09-30,Larissa,Thessaly,Loyalty Silver,2023-05-17
+C0456,Nikos,Georgiou,nikos.georgiou456@mail.gr,F,1968-12-12,THESSALONIKI ,Central Macedonia,Loyalty Gold,2024-01-22
+C0457,Yannis,Makris,yannis.makris457@mail.gr,F,1983-08-30,Athens,Attica,Retail,2024-06-16
+C0458,Katerina,Makris,katerina.makris458@mail.gr,F,1951-10-09,LARISSA ,Thessaly,Loyalty Silver,2022-02-19
+C0459,Giorgos,Pappas,giorgos.pappas459@mail.gr,M,1963-09-27,Larissa,Thessaly,Loyalty Gold,2022-07-30
+C0460,Ioanna,Papadopoulos,ioanna.papadopoulos460@mail.gr,M,1962-04-22,Larissa,Thessaly,Retail,2023-03-05
+C0461,Giorgos,Makris,giorgos.makris461@mail.gr,F,1994-08-27,Ioannina,Epirus,Loyalty Silver,2022-07-23
+C0462,Nikos,Vasileiou,nikos.vasileiou462@mail.gr,M,1976-07-01,Heraklion,Crete,Loyalty Silver,2022-06-14
+C0463,Anna,Karagiannis,anna.karagiannis463@mail.gr,F,1950-03-31,Athens,Attica,Retail,2022-01-14
+C0464,Giorgos,Nikolaou,giorgos.nikolaou464@mail.gr,F,1995-11-28,Larissa,Thessaly,Loyalty Silver,2022-03-18
+C0465,Petros,Nikolaou,petros.nikolaou465@mail.gr,M,1973-09-11,Larissa,Thessaly,Retail,2023-04-21
+C0466,Giorgos,Georgiou,giorgos.georgiou466@mail.gr,M,1988-03-21,Athens,Attica,Retail,2024-01-27
+C0467,Giorgos,Papadopoulos,giorgos.papadopoulos467@mail.gr,F,1979-06-27,Athens,Attica,Retail,2023-01-02
+C0468,Yannis,Vasileiou,yannis.vasileiou468@mail.gr,F,1985-12-15,Patras,Western Greece,Retail,2023-02-14
+C0469,Katerina,Pappas,katerina.pappas469@mail.gr,F,1960-02-22,Patras,Western Greece,Loyalty Gold,2022-05-16
+C0470,Petros,Papadopoulos,petros.papadopoulos470@mail.gr,M,1989-04-23,Larissa,Thessaly,Retail,2022-07-05
+C0471,Sofia,Christodoulou,sofia.christodoulou471@mail.gr,F,1993-05-04,HERAKLION ,Crete,Loyalty Silver,2023-05-15
+C0472,Sofia,Karagiannis,sofia.karagiannis472@mail.gr,F,1997-01-31,Athens,Attica,Retail,2024-02-25
+C0473,Yannis,Oikonomou,yannis.oikonomou473@mail.gr,M,1996-07-27,Larissa,Thessaly,Retail,2023-06-20
+C0474,Petros,Oikonomou,petros.oikonomou474@mail.gr,M,1981-01-07,Larissa,Thessaly,Retail,2023-11-11
+C0475,Ioanna,Pappas,ioanna.pappas475@mail.gr,F,1951-01-17,Larissa,Thessaly,Retail,2023-10-21
+C0476,Anna,Karagiannis,anna.karagiannis476@mail.gr,M,1978-10-07,Piraeus,Attica,Loyalty Gold,2022-09-04
+C0477,Katerina,Papadopoulos,katerina.papadopoulos477@mail.gr,M,1971-01-31,Thessaloniki,Central Macedonia,Loyalty Silver,2022-03-22
+C0478,Kostas,Oikonomou,kostas.oikonomou478@mail.gr,M,1960-08-25,Patras,Western Greece,Loyalty Gold,2023-05-25
+C0479,Ioanna,Papadopoulos,ioanna.papadopoulos479@mail.gr,F,1958-02-26,Larissa,Thessaly,Retail,2024-03-21
+C0480,Yannis,Vasileiou,yannis.vasileiou480@mail.gr,M,1980-07-31,Heraklion,Crete,Loyalty Silver,2023-01-08
+C0481,Maria,Ioannou,maria.ioannou481@mail.gr,M,1982-08-05,Ioannina,Epirus,Loyalty Gold,2024-01-04
+C0482,Giorgos,Nikolaou,giorgos.nikolaou482@mail.gr,M,1999-02-19,PATRAS ,Western Greece,Retail,2023-06-19
+C0483,Petros,Nikolaou,petros.nikolaou483@mail.gr,M,1959-08-06,Thessaloniki,Central Macedonia,Retail,2022-09-18
+C0484,Nikos,Ioannou,nikos.ioannou484@mail.gr,M,1967-02-05,Heraklion,Crete,Retail,2024-01-04
+C0485,Giorgos,Pappas,giorgos.pappas485@mail.gr,F,1990-06-02,Thessaloniki,Central Macedonia,Retail,2023-04-14
+C0486,Yannis,Makris,,F,1988-10-30,Larissa,Thessaly,Retail,2024-05-08
+C0487,Kostas,Makris,kostas.makris487@mail.gr,F,1959-04-17,Heraklion,Crete,Retail,2023-02-01
+C0488,Yannis,Oikonomou,yannis.oikonomou488@mail.gr,F,1974-07-19,Larissa,Thessaly,Retail,2023-02-12
+C0489,Katerina,Karagiannis,katerina.karagiannis489@mail.gr,M,1999-02-23,Thessaloniki,Central Macedonia,Retail,2024-05-31
+C0490,Petros,Makris,petros.makris490@mail.gr,M,1980-12-23,Thessaloniki,Central Macedonia,Retail,2023-11-20
+C0491,Petros,Georgiou,petros.georgiou491@mail.gr,F,1981-08-08,Piraeus,Attica,Loyalty Silver,2023-07-30
+C0492,Yannis,Oikonomou,yannis.oikonomou492@mail.gr,M,1987-11-23,Patras,Western Greece,Loyalty Gold,2024-04-07
+C0493,Anna,Nikolaou,anna.nikolaou493@mail.gr,F,1967-12-08,Athens,Attica,Retail,2022-10-01
+C0494,Eleni,Vasileiou,eleni.vasileiou494@mail.gr,M,1968-04-20,Ioannina,Epirus,Retail,2024-02-11
+C0495,Maria,Christodoulou,maria.christodoulou495@mail.gr,F,1984-11-21,Heraklion,Crete,Loyalty Gold,2022-09-01
+C0496,Petros,Vasileiou,petros.vasileiou496@mail.gr,M,1954-10-29,Heraklion,Crete,Retail,2022-01-14
+C0497,Katerina,Ioannou,katerina.ioannou497@mail.gr,M,1970-03-27,Larissa,Thessaly,Loyalty Silver,2023-10-11
+C0498,Petros,Christodoulou,petros.christodoulou498@mail.gr,F,1976-05-23,Larissa,Thessaly,Loyalty Silver,2023-04-05
+C0499,Ioanna,Nikolaou,ioanna.nikolaou499@mail.gr,F,1983-11-04,Piraeus,Attica,Retail,2022-02-11
+C0500,Katerina,Makris,katerina.makris500@mail.gr,M,1950-07-04,Patras,Western Greece,Retail,2022-12-05
+C0239,Kostas,Christodoulou,kostas.christodoulou239@mail.gr,M,1995-01-08,Athens,Attica,Loyalty Gold,2024-03-04
+C0364,Petros,Ioannou,petros.ioannou364@mail.gr,F,1990-09-04,Patras,Western Greece,Retail,2023-09-19
+C0480,Yannis,Vasileiou,yannis.vasileiou480@mail.gr,M,1980-07-31,Heraklion,Crete,Loyalty Silver,2023-01-08
+C0080,Kostas,Oikonomou,kostas.oikonomou80@mail.gr,M,1979-02-28,Piraeus,Attica,Loyalty Silver,2022-07-06
+C0021,Yannis,Pappas,yannis.pappas21@mail.gr,F,1977-12-19,Ioannina,Epirus,Retail,2023-02-13
+C0079,Kostas,Pappas,kostas.pappas79@mail.gr,F,1975-01-09,Patras,Western Greece,Loyalty Silver,2023-04-07
+C0476,Anna,Karagiannis,anna.karagiannis476@mail.gr,M,1978-10-07,Piraeus,Attica,Loyalty Gold,2022-09-04
+C0166,Anna,Makris,anna.makris166@mail.gr,F,1971-03-14,Athens,Attica,Retail,2022-04-16
