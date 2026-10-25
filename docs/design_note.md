@@ -84,7 +84,7 @@ So `fact_sales → dim_customer` answers *"who is this customer today?"* and `fa
 | Liquid clustering `CLUSTER BY (date_key)` | `fact_sales` | Most queries filter / group by period. Replaces partitioning (24k rows would make tiny partitions). |
 | Change Data Feed | dimensions and fact | Allows downstream incremental consumers and shows row-level changes between versions. |
 
-## 7. Design trade-offs (for the demo)
+## 7. Design trade-offs
 
 1. **Line grain vs order grain.** Line grain is bigger, but order grain cannot answer category / brand questions or compute exact margin.
 2. **Reject vs repair.** Negative quantities could have been turned into `abs(quantity)` — but that is a guess about intent. Rejecting keeps the

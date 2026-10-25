@@ -21,10 +21,10 @@
 -- COMMAND ----------
 
 -- DBTITLE 1,Parameters
-CREATE WIDGET TEXT catalog       DEFAULT 'urbanmart';
-CREATE WIDGET TEXT bronze_schema DEFAULT 'bronze';
-CREATE WIDGET TEXT silver_schema DEFAULT 'silver';
-CREATE WIDGET TEXT gold_schema   DEFAULT 'gold';
+CREATE WIDGET TEXT catalog       DEFAULT 'bootcamp';
+CREATE WIDGET TEXT bronze_schema DEFAULT 'um_bronze_antonismp';
+CREATE WIDGET TEXT silver_schema DEFAULT 'um_silver_antonismp';
+CREATE WIDGET TEXT gold_schema   DEFAULT 'um_gold_antonismp';
 
 -- COMMAND ----------
 
@@ -172,17 +172,3 @@ SELECT
 FROM etl_validation_log
 WHERE run_ts = (SELECT max(run_ts) FROM etl_validation_log)
 ORDER BY check_id;
-
--- COMMAND ----------
-
--- MAGIC %md
--- MAGIC ### Proof that the gate really fails on bad data
--- MAGIC The cell below runs the orphan-key test against a fact row with a product key that does not exist (`-999`).
--- MAGIC It is commented out because it is **meant to fail**. Uncomment it during the demo to show the error message, then comment it again.
-
--- COMMAND ----------
-
--- DBTITLE 1,Negative test (commented out on purpose)
--- SELECT assert_true(count(*) = 0, 'Validation V07 failed: orphan fact_sales.product_key') AS gate
--- FROM (SELECT CAST(-999 AS BIGINT) AS product_key) AS bad_fact
--- LEFT ANTI JOIN dim_product d ON d.product_key = bad_fact.product_key;

@@ -1,8 +1,11 @@
 # Databricks notebook source
+# /// script
+# [tool.databricks.environment]
+# environment_version = "6"
+# ///
 # MAGIC %md
-# MAGIC # 08 · Demo — Delta history, time travel, idempotency & enforced constraints
+# MAGIC # 08 · Delta history, time travel, idempotency & enforced constraints
 # MAGIC
-# MAGIC Used in the 10-minute demo. **Not part of the Lakeflow Job.** Run it after at least two runs of the pipeline.
 # MAGIC
 # MAGIC | Part | Shows |
 # MAGIC |---|---|
@@ -14,10 +17,10 @@
 
 # COMMAND ----------
 
-dbutils.widgets.text("catalog", "urbanmart")
-dbutils.widgets.text("bronze_schema", "bronze")
-dbutils.widgets.text("silver_schema", "silver")
-dbutils.widgets.text("gold_schema", "gold")
+dbutils.widgets.text("catalog", "bootcamp")
+dbutils.widgets.text("bronze_schema", "um_bronze_antonismp")
+dbutils.widgets.text("silver_schema", "um_silver_antonismp")
+dbutils.widgets.text("gold_schema", "um_gold_antonismp")
 
 catalog = dbutils.widgets.get("catalog")
 gold    = f"{catalog}.{dbutils.widgets.get('gold_schema')}"

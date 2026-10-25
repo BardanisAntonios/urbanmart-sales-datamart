@@ -1,0 +1,890 @@
+{
+  "datasets": [
+    {
+      "name": "a070bca9",
+      "displayName": "kpis",
+      "queryLines": [
+        "SELECT\n",
+        "  sum(CASE WHEN op.is_completed THEN f.net_amount END)                              AS net_revenue,\n",
+        "  sum(CASE WHEN op.is_completed THEN f.margin_amount END)                           AS gross_margin,\n",
+        "  round(100 * sum(CASE WHEN op.is_completed THEN f.margin_amount END)\n",
+        "            / sum(CASE WHEN op.is_completed THEN f.net_amount END), 1)              AS margin_pct,\n",
+        "  count(DISTINCT CASE WHEN op.is_completed THEN f.order_id END)                     AS completed_orders,\n",
+        "  round(sum(CASE WHEN op.is_completed THEN f.net_amount END)\n",
+        "        / count(DISTINCT CASE WHEN op.is_completed THEN f.order_id END), 2)         AS avg_order_value,\n",
+        "  round(100 * count(DISTINCT CASE WHEN op.is_returned THEN f.order_id END)\n",
+        "            / count(DISTINCT CASE WHEN NOT op.is_cancelled THEN f.order_id END), 1) AS return_rate_pct\n",
+        "FROM bootcamp.um_gold_antonismp.fact_sales f\n",
+        "JOIN bootcamp.um_gold_antonismp.dim_order_profile op ON op.order_profile_key = f.order_profile_key;\n",
+        " "
+      ]
+    },
+    {
+      "name": "3fd48feb",
+      "displayName": "monthly_store (Q1)",
+      "queryLines": [
+        "SELECT\n",
+        "  d.month_start_date,\n",
+        "  s.region,\n",
+        "  s.store_name,\n",
+        "  s.channel,\n",
+        "  sum(f.net_amount)          AS net_revenue,\n",
+        "  sum(f.margin_amount)       AS gross_margin,\n",
+        "  sum(f.quantity)            AS units_sold,\n",
+        "  count(DISTINCT f.order_id) AS orders\n",
+        "FROM bootcamp.um_gold_antonismp.fact_sales f\n",
+        "JOIN bootcamp.um_gold_antonismp.dim_date          d  ON d.date_key           = f.date_key\n",
+        "JOIN bootcamp.um_gold_antonismp.dim_store         s  ON s.store_key          = f.store_key\n",
+        "JOIN bootcamp.um_gold_antonismp.dim_order_profile op ON op.order_profile_key = f.order_profile_key\n",
+        "WHERE op.is_completed\n",
+        "GROUP BY d.month_start_date, s.region, s.store_name, s.channel;"
+      ]
+    },
+    {
+      "name": "1306e050",
+      "displayName": "category_brand (Q2)",
+      "queryLines": [
+        "SELECT\n",
+        "  p.category,\n",
+        "  p.brand,\n",
+        "  sum(f.net_amount)                                        AS net_revenue,\n",
+        "  sum(f.margin_amount)                                     AS gross_margin,\n",
+        "  round(100 * sum(f.margin_amount) / sum(f.net_amount), 1) AS margin_pct\n",
+        "FROM bootcamp.um_gold_antonismp.fact_sales f\n",
+        "JOIN bootcamp.um_gold_antonismp.dim_product       p  ON p.product_key        = f.product_key\n",
+        "JOIN bootcamp.um_gold_antonismp.dim_order_profile op ON op.order_profile_key = f.order_profile_key\n",
+        "WHERE op.is_completed AND f.product_key <> -1\n",
+        "GROUP BY p.category, p.brand;"
+      ]
+    },
+    {
+      "name": "68c5b817",
+      "displayName": "top_customers  (Q3)",
+      "queryLines": [
+        "SELECT segment, segment_rank, customer_id, full_name, city, net_revenue, orders\n",
+        "FROM (\n",
+        "  SELECT\n",
+        "    c.segment, c.customer_id, c.full_name, c.city,\n",
+        "    sum(f.net_amount)          AS net_revenue,\n",
+        "    count(DISTINCT f.order_id) AS orders,\n",
+        "    rank() OVER (PARTITION BY c.segment ORDER BY sum(f.net_amount) DESC) AS segment_rank\n",
+        "  FROM bootcamp.um_gold_antonismp.fact_sales f\n",
+        "  JOIN bootcamp.um_gold_antonismp.dim_customer      c  ON c.customer_key       = f.customer_key\n",
+        "  JOIN bootcamp.um_gold_antonismp.dim_order_profile op ON op.order_profile_key = f.order_profile_key\n",
+        "  WHERE op.is_completed AND f.customer_key <> -1\n",
+        "  GROUP BY c.segment, c.customer_id, c.full_name, c.city\n",
+        ")\n",
+        "WHERE segment_rank <= 5\n",
+        "ORDER BY segment, segment_rank;"
+      ]
+    },
+    {
+      "name": "0963b10f",
+      "displayName": "returns (Q4)",
+      "queryLines": [
+        "SELECT\n",
+        "  p.category,\n",
+        "  s.store_type,\n",
+        "  count_if(op.is_returned)                            AS returned_lines,\n",
+        "  count(*)                                            AS total_lines,\n",
+        "  round(100 * count_if(op.is_returned) / count(*), 2) AS return_rate_pct\n",
+        "FROM bootcamp.um_gold_antonismp.fact_sales f\n",
+        "JOIN bootcamp.um_gold_antonismp.dim_product       p  ON p.product_key        = f.product_key\n",
+        "JOIN bootcamp.um_gold_antonismp.dim_store         s  ON s.store_key          = f.store_key\n",
+        "JOIN bootcamp.um_gold_antonismp.dim_order_profile op ON op.order_profile_key = f.order_profile_key\n",
+        "WHERE NOT op.is_cancelled AND f.product_key <> -1\n",
+        "GROUP BY p.category, s.store_type;"
+      ]
+    },
+    {
+      "name": "95b45616",
+      "displayName": "daytype_channel (Q5)",
+      "queryLines": [
+        "WITH days AS (\n",
+        "  SELECT day_type, count(*) AS calendar_days\n",
+        "  FROM bootcamp.um_gold_antonismp.dim_date\n",
+        "  WHERE date_key <> -1\n",
+        "  GROUP BY day_type\n",
+        ")\n",
+        "SELECT\n",
+        "  d.day_type,\n",
+        "  s.channel,\n",
+        "  sum(f.net_amount)                                        AS net_revenue,\n",
+        "  count(DISTINCT f.order_id)                               AS orders,\n",
+        "  round(sum(f.net_amount) / count(DISTINCT f.order_id), 2) AS avg_order_value,\n",
+        "  round(sum(f.net_amount) / max(dy.calendar_days), 2)      AS avg_revenue_per_day\n",
+        "FROM bootcamp.um_gold_antonismp.fact_sales f\n",
+        "JOIN bootcamp.um_gold_antonismp.dim_date          d  ON d.date_key           = f.date_key\n",
+        "JOIN bootcamp.um_gold_antonismp.dim_store         s  ON s.store_key          = f.store_key\n",
+        "JOIN bootcamp.um_gold_antonismp.dim_order_profile op ON op.order_profile_key = f.order_profile_key\n",
+        "JOIN days                                         dy ON dy.day_type          = d.day_type\n",
+        "WHERE op.is_completed\n",
+        "GROUP BY d.day_type, s.channel;"
+      ]
+    }
+  ],
+  "pages": [
+    {
+      "name": "699f86a5",
+      "displayName": "Canvas",
+      "layout": [
+        {
+          "widget": {
+            "name": "fffcf3fe",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "3fd48feb",
+                  "fields": [
+                    {
+                      "name": "region",
+                      "expression": "`region`"
+                    },
+                    {
+                      "name": "monthly(month_start_date)",
+                      "expression": "DATE_TRUNC(\"MONTH\", `month_start_date`)"
+                    },
+                    {
+                      "name": "sum(net_revenue)",
+                      "expression": "SUM(`net_revenue`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "frame": {
+                "showTitle": true,
+                "showDescription": false,
+                "title": {
+                  "value": "<span style=\"text-align:center;display:block;\">Monthly Net Revenue by Region</span>",
+                  "fields": []
+                }
+              },
+              "version": 3,
+              "widgetType": "line",
+              "encodings": {
+                "x": {
+                  "fieldName": "monthly(month_start_date)",
+                  "scale": {
+                    "type": "temporal"
+                  }
+                },
+                "y": {
+                  "fieldName": "sum(net_revenue)",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                },
+                "color": {
+                  "fieldName": "region",
+                  "scale": {
+                    "type": "categorical"
+                  }
+                }
+              },
+              "data": {
+                "queryName": "main_query"
+              }
+            }
+          },
+          "position": {
+            "x": 1,
+            "y": 2,
+            "width": 10,
+            "height": 7
+          }
+        },
+        {
+          "widget": {
+            "name": "e6a0bb62",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "3fd48feb",
+                  "fields": [
+                    {
+                      "name": "store_name",
+                      "expression": "`store_name`"
+                    },
+                    {
+                      "name": "sum(net_revenue)",
+                      "expression": "SUM(`net_revenue`)"
+                    },
+                    {
+                      "name": "sum(gross_margin)",
+                      "expression": "SUM(`gross_margin`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "frame": {
+                "showTitle": true,
+                "title": {
+                  "value": "<span style=\"text-align:center;display:block;\">Net Revenue & Margin by Store</span>",
+                  "fields": []
+                }
+              },
+              "version": 3,
+              "widgetType": "bar",
+              "encodings": {
+                "x": {
+                  "fieldName": "store_name",
+                  "scale": {
+                    "type": "categorical"
+                  }
+                },
+                "y": {
+                  "scale": {
+                    "type": "quantitative"
+                  },
+                  "fields": [
+                    {
+                      "fieldName": "sum(net_revenue)"
+                    },
+                    {
+                      "fieldName": "sum(gross_margin)"
+                    }
+                  ]
+                }
+              },
+              "data": {
+                "queryName": "main_query"
+              }
+            }
+          },
+          "position": {
+            "x": 1,
+            "y": 9,
+            "width": 10,
+            "height": 6
+          }
+        },
+        {
+          "widget": {
+            "name": "e13120bc",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "1306e050",
+                  "fields": [
+                    {
+                      "name": "brand",
+                      "expression": "`brand`"
+                    },
+                    {
+                      "name": "category",
+                      "expression": "`category`"
+                    },
+                    {
+                      "name": "sum(gross_margin)",
+                      "expression": "SUM(`gross_margin`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "frame": {
+                "showTitle": true,
+                "title": {
+                  "value": "<span style=\"text-align:center;display:block;\">Gross Margin by Category and Brand</span>",
+                  "fields": []
+                }
+              },
+              "version": 3,
+              "mark": {
+                "layout": "group"
+              },
+              "widgetType": "bar",
+              "encodings": {
+                "x": {
+                  "fieldName": "category",
+                  "scale": {
+                    "type": "categorical"
+                  }
+                },
+                "y": {
+                  "fieldName": "sum(gross_margin)",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                },
+                "color": {
+                  "fieldName": "brand",
+                  "scale": {
+                    "type": "categorical"
+                  }
+                }
+              },
+              "data": {
+                "queryName": "main_query"
+              }
+            }
+          },
+          "position": {
+            "x": 1,
+            "y": 15,
+            "width": 10,
+            "height": 6
+          }
+        },
+        {
+          "widget": {
+            "name": "53ff1121",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "68c5b817",
+                  "fields": [
+                    {
+                      "name": "segment",
+                      "expression": "`segment`"
+                    },
+                    {
+                      "name": "segment_rank",
+                      "expression": "`segment_rank`"
+                    },
+                    {
+                      "name": "full_name",
+                      "expression": "`full_name`"
+                    },
+                    {
+                      "name": "city",
+                      "expression": "`city`"
+                    },
+                    {
+                      "name": "net_revenue",
+                      "expression": "`net_revenue`"
+                    },
+                    {
+                      "name": "orders",
+                      "expression": "`orders`"
+                    }
+                  ],
+                  "disaggregated": true
+                }
+              }
+            ],
+            "spec": {
+              "frame": {
+                "showTitle": true,
+                "title": {
+                  "value": "<span style=\"text-align:center;display:block;\">Top 5 Customers per Segment</span>",
+                  "fields": []
+                }
+              },
+              "version": 2,
+              "widgetType": "table",
+              "encodings": {
+                "columns": [
+                  {
+                    "fieldName": "segment"
+                  },
+                  {
+                    "fieldName": "segment_rank"
+                  },
+                  {
+                    "fieldName": "full_name"
+                  },
+                  {
+                    "fieldName": "city"
+                  },
+                  {
+                    "fieldName": "net_revenue"
+                  },
+                  {
+                    "fieldName": "orders"
+                  }
+                ]
+              },
+              "data": {
+                "queryName": "main_query"
+              }
+            }
+          },
+          "position": {
+            "x": 1,
+            "y": 21,
+            "width": 10,
+            "height": 6
+          }
+        },
+        {
+          "widget": {
+            "name": "a7c16c13",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "0963b10f",
+                  "fields": [
+                    {
+                      "name": "avg(return_rate_pct)",
+                      "expression": "AVG(`return_rate_pct`)"
+                    },
+                    {
+                      "name": "store_type",
+                      "expression": "`store_type`"
+                    },
+                    {
+                      "name": "category",
+                      "expression": "`category`"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "frame": {
+                "showTitle": true,
+                "title": {
+                  "value": "<span style=\"text-align:center;display:block;\">Return Rate % by Category and Store Type</span>",
+                  "fields": []
+                }
+              },
+              "version": 3,
+              "widgetType": "heatmap",
+              "encodings": {
+                "x": {
+                  "fieldName": "store_type",
+                  "scale": {
+                    "type": "categorical"
+                  }
+                },
+                "y": {
+                  "fieldName": "category",
+                  "scale": {
+                    "type": "categorical"
+                  }
+                },
+                "color": {
+                  "fieldName": "avg(return_rate_pct)",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                }
+              },
+              "data": {
+                "queryName": "main_query"
+              }
+            }
+          },
+          "position": {
+            "x": 1,
+            "y": 27,
+            "width": 10,
+            "height": 6
+          }
+        },
+        {
+          "widget": {
+            "name": "7fcb61e4",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "95b45616",
+                  "fields": [
+                    {
+                      "name": "channel",
+                      "expression": "`channel`"
+                    },
+                    {
+                      "name": "sum(avg_revenue_per_day)",
+                      "expression": "SUM(`avg_revenue_per_day`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "frame": {
+                "showTitle": true,
+                "title": {
+                  "value": "<span style=\"text-align:center;display:block;\">**Avg Revenue per Day: Weekday vs Weekend**</span>",
+                  "fields": []
+                }
+              },
+              "version": 3,
+              "widgetType": "bar",
+              "encodings": {
+                "x": {
+                  "fieldName": "channel",
+                  "scale": {
+                    "type": "categorical"
+                  }
+                },
+                "y": {
+                  "fieldName": "sum(avg_revenue_per_day)",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                }
+              },
+              "data": {
+                "queryName": "main_query"
+              }
+            }
+          },
+          "position": {
+            "x": 1,
+            "y": 33,
+            "width": 10,
+            "height": 6
+          }
+        },
+        {
+          "widget": {
+            "name": "1831ef55",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "a070bca9",
+                  "fields": [
+                    {
+                      "name": "sum(net_revenue)",
+                      "expression": "SUM(`net_revenue`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "frame": {
+                "showTitle": true,
+                "title": {
+                  "value": "<span style=\"text-align:center;display:block;\">Net Revenue</span>",
+                  "fields": []
+                }
+              },
+              "version": 2,
+              "widgetType": "counter",
+              "encodings": {
+                "value": {
+                  "fieldName": "sum(net_revenue)"
+                }
+              },
+              "data": {
+                "queryName": "main_query"
+              }
+            }
+          },
+          "position": {
+            "x": 1,
+            "y": 39,
+            "width": 2,
+            "height": 3
+          }
+        },
+        {
+          "widget": {
+            "name": "03178aa6",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "a070bca9",
+                  "fields": [
+                    {
+                      "name": "sum(gross_margin)",
+                      "expression": "SUM(`gross_margin`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "frame": {
+                "showTitle": true,
+                "title": {
+                  "value": "<span style=\"text-align:center;display:block;\">Gross Margin</span>",
+                  "fields": []
+                }
+              },
+              "version": 2,
+              "widgetType": "counter",
+              "encodings": {
+                "value": {
+                  "fieldName": "sum(gross_margin)"
+                }
+              },
+              "data": {
+                "queryName": "main_query"
+              }
+            }
+          },
+          "position": {
+            "x": 3,
+            "y": 39,
+            "width": 2,
+            "height": 3
+          }
+        },
+        {
+          "widget": {
+            "name": "efdf675f",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "a070bca9",
+                  "fields": [
+                    {
+                      "name": "sum(margin_pct)",
+                      "expression": "SUM(`margin_pct`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "frame": {
+                "showTitle": true,
+                "title": {
+                  "value": "<span style=\"text-align:center;display:block;\">Margin %</span>",
+                  "fields": []
+                }
+              },
+              "version": 2,
+              "widgetType": "counter",
+              "encodings": {
+                "value": {
+                  "fieldName": "sum(margin_pct)"
+                }
+              },
+              "data": {
+                "queryName": "main_query"
+              }
+            }
+          },
+          "position": {
+            "x": 5,
+            "y": 39,
+            "width": 2,
+            "height": 3
+          }
+        },
+        {
+          "widget": {
+            "name": "b0b6c732",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "a070bca9",
+                  "fields": [
+                    {
+                      "name": "sum(completed_orders)",
+                      "expression": "SUM(`completed_orders`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "frame": {
+                "showTitle": true,
+                "title": {
+                  "value": "<span style=\"text-align:center;display:block;\">Orders</span>",
+                  "fields": []
+                }
+              },
+              "version": 2,
+              "widgetType": "counter",
+              "encodings": {
+                "value": {
+                  "fieldName": "sum(completed_orders)"
+                }
+              },
+              "data": {
+                "queryName": "main_query"
+              }
+            }
+          },
+          "position": {
+            "x": 7,
+            "y": 39,
+            "width": 2,
+            "height": 3
+          }
+        },
+        {
+          "widget": {
+            "name": "502a1239",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "a070bca9",
+                  "fields": [
+                    {
+                      "name": "sum(avg_order_value)",
+                      "expression": "SUM(`avg_order_value`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "frame": {
+                "showTitle": true,
+                "title": {
+                  "value": "<span style=\"text-align:center;display:block;\">Avg Order Value</span>",
+                  "fields": []
+                }
+              },
+              "version": 2,
+              "widgetType": "counter",
+              "encodings": {
+                "value": {
+                  "fieldName": "sum(avg_order_value)"
+                }
+              },
+              "data": {
+                "queryName": "main_query"
+              }
+            }
+          },
+          "position": {
+            "x": 9,
+            "y": 39,
+            "width": 2,
+            "height": 3
+          }
+        },
+        {
+          "widget": {
+            "name": "7e903d8f",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "a070bca9",
+                  "fields": [
+                    {
+                      "name": "sum(return_rate_pct)",
+                      "expression": "SUM(`return_rate_pct`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "frame": {
+                "showTitle": true,
+                "title": {
+                  "value": "<span style=\"text-align:center;display:block;\">Return Rate %</span>",
+                  "fields": []
+                }
+              },
+              "version": 2,
+              "widgetType": "counter",
+              "encodings": {
+                "value": {
+                  "fieldName": "sum(return_rate_pct)"
+                }
+              },
+              "data": {
+                "queryName": "main_query"
+              }
+            }
+          },
+          "position": {
+            "x": 5,
+            "y": 42,
+            "width": 2,
+            "height": 3
+          }
+        },
+        {
+          "widget": {
+            "name": "8d4017c2",
+            "multilineTextboxSpec": {
+              "lines": [
+                "# <span style=\"text-align:center;display:block;\">UrbanMart Sales Performance 2024–2025</span>"
+              ]
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "width": 12,
+            "height": 1
+          }
+        },
+        {
+          "widget": {
+            "name": "bcb2a4d6",
+            "queries": [
+              {
+                "name": "dashboards/01f1ce595218134ab5347c65a22b030f/datasets/01f1ce5ab7a91bf1a77ba29282fca74c_region",
+                "query": {
+                  "datasetName": "3fd48feb",
+                  "fields": [
+                    {
+                      "name": "region",
+                      "expression": "`region`"
+                    },
+                    {
+                      "name": "region_associativity",
+                      "expression": "COUNT_IF(`associative_filter_predicate_group`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "frame": {
+                "showTitle": true
+              },
+              "widgetType": "filter-multi-select",
+              "encodings": {
+                "fields": [
+                  {
+                    "fieldName": "region",
+                    "queryName": "dashboards/01f1ce595218134ab5347c65a22b030f/datasets/01f1ce5ab7a91bf1a77ba29282fca74c_region"
+                  }
+                ]
+              }
+            }
+          },
+          "position": {
+            "x": 4,
+            "y": 1,
+            "width": 4,
+            "height": 1
+          }
+        }
+      ],
+      "pageType": "PAGE_TYPE_CANVAS",
+      "layoutVersion": "GRID_V1"
+    }
+  ],
+  "uiSettings": {
+    "theme": {
+      "widgetHeaderAlignment": "ALIGNMENT_UNSPECIFIED"
+    },
+    "applyModeEnabled": false
+  }
+}

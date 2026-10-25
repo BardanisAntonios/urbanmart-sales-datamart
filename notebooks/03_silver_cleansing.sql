@@ -32,10 +32,10 @@
 -- COMMAND ----------
 
 -- DBTITLE 1,Parameters
-CREATE WIDGET TEXT catalog       DEFAULT 'urbanmart';
-CREATE WIDGET TEXT bronze_schema DEFAULT 'bronze';
-CREATE WIDGET TEXT silver_schema DEFAULT 'silver';
-CREATE WIDGET TEXT gold_schema   DEFAULT 'gold';
+CREATE WIDGET TEXT catalog       DEFAULT 'bootcamp';
+CREATE WIDGET TEXT bronze_schema DEFAULT 'um_bronze_antonismp';
+CREATE WIDGET TEXT silver_schema DEFAULT 'um_silver_antonismp';
+CREATE WIDGET TEXT gold_schema   DEFAULT 'um_gold_antonismp';
 
 -- COMMAND ----------
 

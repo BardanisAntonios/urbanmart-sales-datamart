@@ -20,20 +20,10 @@
 -- DBTITLE 1,Parameters
 -- One widget per object name. Every notebook of the pipeline declares the same widgets,
 -- and the Lakeflow Job passes the same values to all tasks (job parameters).
-CREATE WIDGET TEXT catalog       DEFAULT 'urbanmart';
-CREATE WIDGET TEXT bronze_schema DEFAULT 'bronze';
-CREATE WIDGET TEXT silver_schema DEFAULT 'silver';
-CREATE WIDGET TEXT gold_schema   DEFAULT 'gold';
-
--- COMMAND ----------
-
--- DBTITLE 1,Catalog (run once, only if you own the metastore / Free Edition)
--- Creating a catalog needs the CREATE CATALOG privilege. On Databricks Free Edition you have it.
--- In a shared workspace use a catalog you already own and put its name in the `catalog` widget.
--- Uncomment the next line the first time only:
--- CREATE CATALOG IF NOT EXISTS urbanmart COMMENT 'UrbanMart retail analytics (capstone).';
-
-USE CATALOG IDENTIFIER(:catalog);
+CREATE WIDGET TEXT catalog       DEFAULT 'bootcamp';
+CREATE WIDGET TEXT bronze_schema DEFAULT 'um_bronze_antonismp';
+CREATE WIDGET TEXT silver_schema DEFAULT 'um_silver_antonismp';
+CREATE WIDGET TEXT gold_schema   DEFAULT 'um_gold_antonismp';
 
 -- COMMAND ----------
 
@@ -77,7 +67,7 @@ SHOW VOLUMES;
 
 -- DBTITLE 1,Files in the landing volume (expected: 6)
 -- MAGIC %python
--- MAGIC landing = f"/Volumes/{dbutils.widgets.get('catalog')}/{dbutils.widgets.get('bronze_schema')}/landing/"
+-- MAGIC landing = f"/Volumes/{dbutils.widgets.get('catalog')}/{dbutils.widgets.get('bronze_schema')}/landing/data"
 -- MAGIC files = dbutils.fs.ls(landing)
 -- MAGIC display(spark.createDataFrame([(f.name, f.size) for f in files], "file_name STRING, size_bytes BIGINT"))
 -- MAGIC print(f"{len(files)} file(s) in {landing}")

@@ -33,6 +33,9 @@ flowchart LR
 | Silver | `urbanmart.silver` | Standardised, typed, de-duplicated tables; `stg_*` tables with per-row `dq_errors`; `etl_rejects` |
 | Gold | `urbanmart.gold` | `dim_date`, `dim_customer`, `dim_customer_scd2`, `dim_product`, `dim_store`, `dim_order_profile`, `fact_sales`, `fact_sales_monthly`, `etl_validation_log` |
 
+Catalog and schema names are notebook / job parameters. In the shared bootcamp workspace the project runs in
+`bootcamp.um_bronze_antonismp`, `bootcamp.um_silver_antonismp` and `bootcamp.um_gold_antonismp`.
+
 The whole chain runs as one **Lakeflow Job** — the validation notebook is the final task, so a failed check fails the run.
 
 ## Star schema
@@ -84,6 +87,16 @@ line reconciliation bronze → gold, Σ net amount and Σ quantity silver = gold
 business keys, one unknown member per dimension, SCD2 integrity (one current version, no gaps / overlaps), derived-measure consistency,
 every reject explained, aggregate fact reconciles to the detail. Notebook 08 proves the gate and the `CHECK` constraints really fail on bad data.
 
+## Orchestration, history and time travel
+
+The pipeline is defined as code in [`resources/urbanmart_sales_pipeline.job.yml`](resources/urbanmart_sales_pipeline.job.yml): one Lakeflow Job with
+seven notebook tasks on serverless compute — `setup → bronze_ingestion → bronze_profiling → silver_cleansing → gold_dimensions → gold_fact → validation_gate`.
+Each task starts only if the previous one succeeded, and the validation gate is the last task.
+
+[`notebooks/08_delta_history_and_constraints.py`](notebooks/08_delta_history_and_constraints.py) uses `DESCRIBE HISTORY` and time travel
+(`VERSION AS OF`, `RESTORE`) to show how the tables changed between loads, including the operation metrics proving that a second run of the
+`fact_sales` MERGE inserts, updates and deletes 0 rows.
+
 ## Results
 
 | KPI (Completed orders, 2024–2025) | Value |
@@ -98,15 +111,22 @@ every reject explained, aggregate fact reconciles to the detail. Notebook 08 pro
 - Highest return rates: **Electronics in Malls** (7.2 % of lines) and **Home on High Streets** (7.1 %).
 - Weekends sell **as much per day** as weekdays; online is 8 % of revenue at a similar margin.
 
-Dashboard specification: [`docs/dashboard.md`](docs/dashboard.md).
+## Dashboard
 
-<!-- After publishing the dashboard, save a screenshot as docs/img/dashboard.png and uncomment:
-![UrbanMart dashboard](docs/img/dashboard.png)
--->
+The AI/BI dashboard **UrbanMart Sales Performance** answers the five questions with KPI counters and seven charts, all built on gold tables only.
+
+- Layout and datasets: [`dashboards/urbanmart_sales_performance.lvdash.json`](dashboards/urbanmart_sales_performance.lvdash.json) (exported from Databricks)
+- Deployment definition: [`resources/urbanmart_sales_dashboard.dashboard.yml`](resources/urbanmart_sales_dashboard.dashboard.yml)
+- Specification of every visual: [`docs/dashboard.md`](docs/dashboard.md)
+
+![Dashboard – overview](docs/img/dashboard_1.png)
+![Dashboard – details](docs/img/dashboard_2.png)
 
 ## Repository structure
 
 ```
+├── README.md
+├── databricks.yml                # Databricks Asset Bundle (variables, dev / bootcamp targets)
 ├── data/                         # the 6 source CSV extracts
 ├── notebooks/
 │   ├── 00_setup.sql              # schemas + landing volume
@@ -117,10 +137,17 @@ Dashboard specification: [`docs/dashboard.md`](docs/dashboard.md).
 │   ├── 05_gold_fact.sql          # fact_sales + fact_sales_monthly
 │   ├── 06_validation.sql         # 27 checks + assert_true gate
 │   ├── 07_analytics.sql          # Q1–Q5, dashboard datasets
-│   └── 08_demo_time_travel_and_constraints.py   # history, time travel, idempotency, constraint demo
-├── resources/urbanmart_sales_pipeline.job.yml   # Lakeflow Job definition
-├── databricks.yml                # Databricks Asset Bundle
-└── docs/                         # DQ log, design note + ERD, dashboard spec, demo script
+│   └── 08_delta_history_and_constraints.py   # history, time travel, idempotency, enforced constraints
+├── resources/
+│   ├── urbanmart_sales_pipeline.job.yml         # Lakeflow Job (pipeline) definition
+│   └── urbanmart_sales_dashboard.dashboard.yml  # AI/BI dashboard definition
+├── dashboards/
+│   └── urbanmart_sales_performance.lvdash.json  # exported dashboard (layout + datasets)
+└── docs/
+    ├── dq_log.md                 # data-quality issues and handling rules
+    ├── design_note.md            # Kimball design, measures, ERD, trade-offs
+    ├── dashboard.md              # dashboard specification and findings
+    └── img/                      # dashboard screenshots
 ```
 
 ## How to run
@@ -134,10 +161,12 @@ Dashboard specification: [`docs/dashboard.md`](docs/dashboard.md).
 5. **Run the job:** either create it in the UI (*Jobs & Pipelines → Create job*, one notebook task per notebook 00–06, chained in that order,
    job parameters `catalog`, `bronze_schema`, `silver_schema`, `gold_schema`) or deploy the bundle:
    ```bash
-   databricks bundle deploy -t dev
+   databricks bundle deploy -t dev          # or -t bootcamp for the shared bootcamp workspace
    databricks bundle run urbanmart_sales_pipeline -t dev
    ```
-6. Run `07_analytics.sql`, build the dashboard, and run `08_demo_…` after a second job run.
+   The same command deploys the dashboard defined in `resources/urbanmart_sales_dashboard.dashboard.yml`.
+   Without the CLI, import `dashboards/urbanmart_sales_performance.lvdash.json` via *Dashboards → Create → Import dashboard from file*.
+6. Run `07_analytics.sql` and open the dashboard. After a second job run, run `08_delta_history_and_constraints.py`.
 
 Every notebook is **idempotent**: bronze and silver are rebuilt with `CREATE OR REPLACE`, gold is loaded with `MERGE` on business keys,
 so a second run inserts, updates and deletes nothing.
@@ -150,3 +179,4 @@ Databricks SQL · Delta Lake (liquid clustering, CHECK constraints, time travel,
 ---
 
 **Author:** Antonios Bardanis — [LinkedIn](https://www.linkedin.com/in/antonios-bardanis-218976417/)
+

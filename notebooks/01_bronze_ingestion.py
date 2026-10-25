@@ -1,4 +1,8 @@
 # Databricks notebook source
+# /// script
+# [tool.databricks.environment]
+# environment_version = "6"
+# ///
 # MAGIC %md
 # MAGIC # 01 · Bronze — Raw ingestion
 # MAGIC
@@ -26,14 +30,14 @@
 # COMMAND ----------
 
 # DBTITLE 1,Parameters
-dbutils.widgets.text("catalog", "urbanmart")
-dbutils.widgets.text("bronze_schema", "bronze")
-dbutils.widgets.text("silver_schema", "silver")
-dbutils.widgets.text("gold_schema", "gold")
+dbutils.widgets.text("catalog", "bootcamp")
+dbutils.widgets.text("bronze_schema", "um_bronze_antonismp")
+dbutils.widgets.text("silver_schema", "um_silver_antonismp")
+dbutils.widgets.text("gold_schema", "um_gold_antonismp")
 
 catalog       = dbutils.widgets.get("catalog")
 bronze_schema = dbutils.widgets.get("bronze_schema")
-landing_path  = f"/Volumes/{catalog}/{bronze_schema}/landing"
+landing_path  = f"/Volumes/{catalog}/{bronze_schema}/landing/data"
 print(f"Target schema : {catalog}.{bronze_schema}\nLanding volume: {landing_path}")
 
 # COMMAND ----------
