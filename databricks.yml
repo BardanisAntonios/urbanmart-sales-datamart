@@ -1,7 +1,7 @@
-# Databricks Asset Bundle — deploys the UrbanMart pipeline as a Lakeflow Job.
-#   databricks bundle validate
-#   databricks bundle deploy -t dev
-#   databricks bundle run urbanmart_sales_pipeline -t dev
+# Databricks Asset Bundle — deploys the UrbanMart Lakeflow Job and the AI/BI dashboard.
+#   databricks bundle validate -t bootcamp
+#   databricks bundle deploy   -t bootcamp
+#   databricks bundle run urbanmart_sales_pipeline -t bootcamp
 bundle:
   name: urbanmart_sales_datamart
 
@@ -18,8 +18,22 @@ variables:
     default: silver
   gold_schema:
     default: gold
+  warehouse_id:
+    description: SQL warehouse that runs the dashboard queries (looked up by name).
+    lookup:
+      warehouse: "Serverless Starter Warehouse"
 
 targets:
+  # Own workspace (e.g. Databricks Free Edition) with catalog `urbanmart`.
   dev:
     mode: development
     default: true
+
+  # Shared EY bootcamp workspace.
+  bootcamp:
+    mode: development
+    variables:
+      catalog: bootcamp
+      bronze_schema: um_bronze_antonismp
+      silver_schema: um_silver_antonismp
+      gold_schema: um_gold_antonismp

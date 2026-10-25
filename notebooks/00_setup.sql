@@ -24,6 +24,7 @@ CREATE WIDGET TEXT catalog       DEFAULT 'bootcamp';
 CREATE WIDGET TEXT bronze_schema DEFAULT 'um_bronze_antonismp';
 CREATE WIDGET TEXT silver_schema DEFAULT 'um_silver_antonismp';
 CREATE WIDGET TEXT gold_schema   DEFAULT 'um_gold_antonismp';
+USE CATALOG IDENTIFIER(:catalog);
 
 -- COMMAND ----------
 
@@ -41,7 +42,7 @@ CREATE SCHEMA IF NOT EXISTS IDENTIFIER(:gold_schema)
 
 -- DBTITLE 1,Landing volume
 -- A managed volume inside the bronze schema. Upload the 6 CSV files here:
--- Catalog Explorer -> <catalog> -> <bronze_schema> -> Volumes -> landing -> "Upload to this volume".
+-- Catalog Explorer -> <catalog> -> <bronze_schema> -> Volumes -> landing -> folder "data" -> "Upload to this volume".
 USE SCHEMA IDENTIFIER(:bronze_schema);
 
 CREATE VOLUME IF NOT EXISTS landing
@@ -61,7 +62,7 @@ SHOW VOLUMES;
 -- MAGIC %md
 -- MAGIC ### Check the upload
 -- MAGIC After uploading the files, the cell below must list **6 CSV files**.
--- MAGIC (Equivalent to `LIST '/Volumes/urbanmart/bronze/landing/'` for the default widget values.)
+-- MAGIC (Equivalent to `LIST '/Volumes/bootcamp/um_bronze_antonismp/landing/data/'` for the default widget values.)
 
 -- COMMAND ----------
 

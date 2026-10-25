@@ -119,8 +119,7 @@ The AI/BI dashboard **UrbanMart Sales Performance** answers the five questions w
 - Deployment definition: [`resources/urbanmart_sales_dashboard.dashboard.yml`](resources/urbanmart_sales_dashboard.dashboard.yml)
 - Specification of every visual: [`docs/dashboard.md`](docs/dashboard.md)
 
-![Dashboard – overview](docs/img/dashboard_1.png)
-![Dashboard – details](docs/img/dashboard_2.png)
+- Exported dashboard (all visuals): [`docs/dashboard.pdf`](docs/dashboard.pdf)
 
 ## Repository structure
 
@@ -147,7 +146,7 @@ The AI/BI dashboard **UrbanMart Sales Performance** answers the five questions w
     ├── dq_log.md                 # data-quality issues and handling rules
     ├── design_note.md            # Kimball design, measures, ERD, trade-offs
     ├── dashboard.md              # dashboard specification and findings
-    └── img/                      # dashboard screenshots
+    └── dashboard.pdf             # exported dashboard (PDF)
 ```
 
 ## How to run
@@ -157,7 +156,7 @@ The AI/BI dashboard **UrbanMart Sales Performance** answers the five questions w
 1. **Import** this repository: *Workspace → Create → Git folder* (paste the repo URL), or import the `notebooks/` files.
 2. **Catalog:** in `00_setup.sql` uncomment `CREATE CATALOG IF NOT EXISTS urbanmart` the first time, or set the `catalog` widget to a catalog you own.
 3. **Run `00_setup.sql`** → creates the `bronze`, `silver`, `gold` schemas and the `bronze.landing` volume.
-4. **Upload** the 6 files of `data/` with *Catalog Explorer → bronze → Volumes → landing → Upload to this volume*.
+4. **Upload** the 6 files of `data/` with *Catalog Explorer → Volumes → landing → create a folder data → Upload to this volume*.
 5. **Run the job:** either create it in the UI (*Jobs & Pipelines → Create job*, one notebook task per notebook 00–06, chained in that order,
    job parameters `catalog`, `bronze_schema`, `silver_schema`, `gold_schema`) or deploy the bundle:
    ```bash
